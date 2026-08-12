@@ -4,10 +4,10 @@ import React, { useState, useEffect } from 'react';
 
 const navItems = [
   { label: 'Program',                href: '#program',              num: '01' },
-  { label: 'Mengapa UPT Bahasa',     href: '#mengapa-upt-bahasa',   num: '02' },
-  { label: 'Model Pengembangan',     href: '#model-pengembangan',   num: '03' },
-  { label: 'Program Internasional',  href: '#program-internasional', num: '04' },
-  { label: 'Tahapan Implementasi',   href: '#tahapan-implementasi', num: '05' },
+  { label: 'Latar Belakang',         href: '#latar-belakang',       num: '02' },
+  { label: 'Alur Program',           href: '#alur-program',         num: '03' },
+  { label: 'Pengembangan Guru',      href: '#pengembangan-guru',    num: '04' },
+  { label: 'Capaian Siswa',          href: '#capaian-siswa',        num: '05' },
   { label: 'Dampak Program',         href: '#dampak-program',       num: '06' },
 ];
 
@@ -68,9 +68,9 @@ export default function Header() {
           <button onClick={scrollToTop} className="flex items-center gap-3 group" aria-label="Kembali ke atas">
             <div className="flex items-center gap-2">
               <img
-                src="/assets/images/Group-1076-1-1-1785412782488.png"
-                alt="Briton English Education"
-                className="h-9 w-auto object-contain"
+                src="/assets/images/mbi_logo_transparat_tighter-1786553481962.png"
+                alt="Madrasah Berbahasa Inggris (MBI) — Cambridge English for Kemenag"
+                className="h-10 w-auto object-contain"
               />
             </div>
           </button>

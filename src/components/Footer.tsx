@@ -21,16 +21,17 @@ export default function Footer() {
           <div>
             <div className="mb-4">
               <img
-                src="/assets/images/Group-1076-1-1-1785412782488.png"
-                alt="Briton English Education"
-                className="h-10 w-auto object-contain"
+                src="/assets/images/mbi_logo_transparat_tighter-1786553481962.png"
+                alt="Madrasah Berbahasa Inggris (MBI) — Cambridge English for Kemenag"
+                className="h-12 w-auto object-contain"
               />
             </div>
             <p className="text-xs font-semibold mb-2" style={{ color: 'var(--gold)' }}>
-              Pengembangan & Pendampingan UPT Pusat Bahasa
+              Cambridge English for Kemenag
             </p>
+            <p className="text-xs font-bold text-white mb-2">Madrasah Berbahasa Inggris (MBI)</p>
             <p className="text-xs leading-relaxed" style={{ color: 'rgba(255,255,255,0.45)' }}>
-              Program pengembangan dan pendampingan UPT Pusat Bahasa Bertaraf Internasional untuk Perguruan Tinggi Keagamaan Islam Negeri.
+              Program Nasional Peningkatan Kualifikasi dan Kompetensi Guru Bahasa Inggris Madrasah Berbasis Standar Cambridge.
             </p>
           </div>
 
@@ -41,10 +42,11 @@ export default function Footer() {
             </p>
             <div className="flex flex-col gap-3">
               {[
-                { label: 'Mengapa UPT Bahasa', href: '#mengapa-upt-bahasa' },
-                { label: 'Model Pengembangan', href: '#model-pengembangan' },
-                { label: 'Program Internasional', href: '#program-internasional' },
-                { label: 'Tahapan Implementasi', href: '#tahapan-implementasi' },
+                { label: 'Latar Belakang Program', href: '#latar-belakang' },
+                { label: 'Alur Program Nasional', href: '#alur-program' },
+                { label: 'Pipeline Pengembangan Guru', href: '#pengembangan-guru' },
+                { label: 'Cambridge English for Teachers', href: '#ceft' },
+                { label: 'Capaian Siswa', href: '#capaian-siswa' },
                 { label: 'Dampak Program', href: '#dampak-program' },
                 { label: 'Konsultasi Program', href: '#konsultasi' },
               ].map((link) => (
@@ -66,14 +68,12 @@ export default function Footer() {
               Kontak
             </p>
             <div className="flex flex-col gap-4">
-              {/* Company info */}
               <div>
                 <p className="text-xs font-semibold text-white mb-0.5">Briton English Education</p>
                 <p className="text-xs" style={{ color: 'rgba(255,255,255,0.45)' }}>
                   Cambridge English Authorised Exam Centre ID003
                 </p>
               </div>
-              {/* Contact details */}
               <div>
                 <p className="text-xs font-semibold text-white mb-0.5">Email</p>
                 <p className="text-xs" style={{ color: 'rgba(255,255,255,0.45)' }}>sbi@britonenglish.id</p>
@@ -98,7 +98,7 @@ export default function Footer() {
           style={{ borderTop: '1px solid rgba(255,255,255,0.06)' }}
         >
           <p className="text-xs" style={{ color: 'rgba(255,255,255,0.35)' }}>
-            © 2026 Briton English Education. All rights reserved. Program Pengembangan UPT Pusat Bahasa Bertaraf Internasional untuk PTKIN.
+            © 2026 Cambridge English for Kemenag — Madrasah Berbahasa Inggris (MBI). Program Nasional Peningkatan Kompetensi Guru Bahasa Inggris Madrasah.
           </p>
           <div className="flex items-center gap-6">
             <a href="#" className="text-xs transition-colors hover:text-white" style={{ color: 'rgba(255,255,255,0.35)' }}>
