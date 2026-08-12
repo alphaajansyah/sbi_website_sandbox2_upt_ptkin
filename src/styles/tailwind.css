@@ -1,0 +1,368 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --fog: #F5F4F0;
+  --fog-dark: #E8E6DF;
+  --stone: #A8B09A;
+  --stone-dark: #7A8A6E;
+  --navy: #1A3A2A;
+  --navy-light: #234D38;
+  --navy-deep: #0F2318;
+  --green: #1A3A2A;
+  --green-light: #234D38;
+  --green-deep: #0F2318;
+  --green-mid: #2D5A3D;
+  --green-sage: #8FAF8A;
+  --gold: #B8963C;
+  --gold-light: #CCA84A;
+  --gold-pale: #F0E4C0;
+  --ink: #1C2B1E;
+  --ink-soft: #3D4F3E;
+  --white: #FAFAF8;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+  background-color: var(--fog);
+  color: var(--ink);
+  font-family: 'Manrope', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+.font-serif {
+  font-family: 'DM Serif Display', serif;
+}
+
+/* ─── Scrollbar ─── */
+::-webkit-scrollbar {
+  width: 14px;
+  height: 14px;
+}
+::-webkit-scrollbar-track {
+  background: var(--fog);
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--stone);
+  border-radius: 8px;
+  border: 3px solid var(--fog);
+  min-height: 48px;
+  transition: background 0.2s ease;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--stone-dark);
+}
+::-webkit-scrollbar-corner {
+  background: var(--fog);
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--stone) var(--fog);
+}
+*:hover {
+  scrollbar-color: var(--stone-dark) var(--fog);
+}
+
+/* ─── Text Reveal (masked) ─── */
+.text-reveal-wrapper {
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: bottom;
+}
+.text-reveal-content {
+  display: block;
+  transform: translateY(108%);
+  opacity: 0;
+  transition: transform 1.1s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.8s ease;
+}
+.reveal-active .text-reveal-content {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* ─── Scroll Reveal ─── */
+.reveal {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-hidden {
+  opacity: 0;
+  transform: translateY(2rem);
+  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal-hidden.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ─── Ken Burns ─── */
+@keyframes kenBurns {
+  0%   { transform: scale(1.0) translate(0%, 0%); }
+  33%  { transform: scale(1.08) translate(-1%, -0.5%); }
+  66%  { transform: scale(1.05) translate(1%, 0.5%); }
+  100% { transform: scale(1.0) translate(0%, 0%); }
+}
+.ken-burns {
+  animation: kenBurns 28s ease-in-out infinite;
+  will-change: transform;
+}
+
+/* ─── Marquee ─── */
+@keyframes marqueeScroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marqueeScroll 36s linear infinite;
+}
+.marquee-track:hover { animation-play-state: paused; }
+
+/* ─── Nav underline ─── */
+.nav-anchor {
+  position: relative;
+}
+.nav-anchor::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--gold);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.nav-anchor:hover::after,
+.nav-anchor.active::after {
+  transform: scaleX(1);
+}
+
+/* ─── Gold CTA Button ─── */
+.btn-gold {
+  background: var(--gold);
+  color: #0F2318;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+.btn-gold:hover {
+  background: var(--gold-light);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(184, 150, 60, 0.35);
+}
+.btn-gold:active {
+  transform: translateY(0);
+}
+
+/* ─── Green CTA Button ─── */
+.btn-navy {
+  background: var(--green);
+  color: var(--white);
+  font-weight: 600;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+.btn-navy:hover {
+  background: var(--green-light);
+  transform: translateY(-1px);
+}
+
+/* ─── Card hover ─── */
+.inquiry-card {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.3s ease;
+  cursor: pointer;
+}
+.inquiry-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 48px rgba(26, 58, 42, 0.14);
+}
+.inquiry-card.selected {
+  border-color: var(--gold) !important;
+  box-shadow: 0 0 0 2px var(--gold), 0 20px 48px rgba(184, 150, 60, 0.2);
+}
+
+/* ─── Department grid item ─── */
+.dept-chip {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+}
+.dept-chip:hover {
+  background: var(--green);
+  color: var(--white);
+  transform: scale(1.03);
+}
+.dept-chip.selected {
+  background: var(--green);
+  color: var(--white);
+  border-color: var(--green);
+}
+
+/* ─── Form step transition ─── */
+.form-step {
+  transition: opacity 0.5s ease, transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.form-step.exiting {
+  opacity: 0;
+  transform: translateX(-24px);
+  pointer-events: none;
+}
+.form-step.entering {
+  opacity: 0;
+  transform: translateX(24px);
+}
+.form-step.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ─── Progress dots ─── */
+.progress-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.3);
+  transition: background 0.4s ease, width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.progress-dot.active {
+  background: var(--gold);
+  width: 24px;
+  border-radius: 4px;
+}
+
+/* ─── Section question heading ─── */
+.question-serif {
+  font-family: 'DM Serif Display', serif;
+  color: var(--green-deep);
+  line-height: 1.1;
+}
+
+/* ─── Stat number ─── */
+.stat-gold {
+  font-family: 'DM Serif Display', serif;
+  color: var(--gold);
+  line-height: 1;
+}
+
+/* ─── Aid slider ─── */
+.aid-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 4px;
+  background: var(--fog-dark);
+  border-radius: 2px;
+  outline: none;
+}
+.aid-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--gold);
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(184, 150, 60, 0.4);
+  transition: transform 0.2s ease;
+}
+.aid-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+}
+
+/* ─── Funnel bar ─── */
+.funnel-bar {
+  height: 48px;
+  border-radius: 4px;
+  background: var(--green);
+  transition: width 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+.funnel-bar::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent 60%, rgba(255,255,255,0.08));
+}
+
+/* ─── Outcome tag ─── */
+.outcome-tag {
+  transition: all 0.3s ease;
+}
+.outcome-tag:hover {
+  background: var(--green);
+  color: var(--white);
+  transform: scale(1.04);
+}
+
+/* ─── Image parallax container ─── */
+.parallax-img-wrap {
+  overflow: hidden;
+  position: relative;
+}
+.parallax-img-wrap img {
+  transition: transform 0.1s linear;
+  will-change: transform;
+}
+
+/* ─── Delay utilities ─── */
+.delay-100 { transition-delay: 0.1s; }
+.delay-200 { transition-delay: 0.2s; }
+.delay-300 { transition-delay: 0.3s; }
+.delay-400 { transition-delay: 0.4s; }
+.delay-500 { transition-delay: 0.5s; }
+.delay-600 { transition-delay: 0.6s; }
+.delay-700 { transition-delay: 0.7s; }
+
+/* ─── Line decoration ─── */
+.rule-gold {
+  height: 2px;
+  background: linear-gradient(90deg, var(--gold), transparent);
+  width: 64px;
+}
+
+/* ─── Input focus ─── */
+.form-input {
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: white;
+  transition: border-color 0.3s ease, background 0.3s ease;
+}
+.form-input::placeholder {
+  color: rgba(255,255,255,0.4);
+}
+.form-input:focus {
+  outline: none;
+  border-color: var(--gold);
+  background: rgba(255,255,255,0.18);
+}
+
+/* ─── Noise texture overlay ─── */
+.noise-overlay {
+  position: absolute;
+  inset: 0;
+  opacity: 0.025;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 128px 128px;
+}
