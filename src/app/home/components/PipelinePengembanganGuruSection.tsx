@@ -143,7 +143,10 @@ export default function PipelinePengembanganGuruSection() {
                     className="absolute inset-0 pointer-events-none"
                     style={{
                       background: 'linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.04) 50%, transparent 100%)',
-                      animation: animated ? 'shimmer 3s infinite' : 'none',
+                      animationName: animated ? 'shimmer' : 'none',
+                      animationDuration: '3s',
+                      animationTimingFunction: 'ease',
+                      animationIterationCount: 'infinite',
                       animationDelay: `${i * 200}ms`,
                     }}
                   />
