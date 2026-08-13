@@ -35,7 +35,7 @@ export default function Footer() {
                 style={{ background: 'rgba(255,255,255,0.95)', display: 'inline-flex' }}
               >
                 <img
-                  src="/assets/images/Logo_Briton_2026-1784029012948.png"
+                  src="/assets/images/Group-1098-1-1786654279025.png"
                   alt="Briton English Education"
                   className="h-10 w-auto object-contain"
                 />
