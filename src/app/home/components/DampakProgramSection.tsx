@@ -75,14 +75,14 @@ export default function DampakProgramSection() {
         {/* Wide image */}
         <div
           className={`mb-14 relative overflow-hidden rounded-2xl transition-all duration-1000 delay-150 ${revealed ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
-          style={{ aspectRatio: '16/7' }}
+          style={{ aspectRatio: '16/7', background: '#f5f2ec' }}
         >
           <img
             src="/assets/images/mbi_general__1_-1786657983166.png"
             alt="Guru dan peserta didik madrasah — penerima manfaat nyata dari Program Madrasah Berbahasa Inggris (MBI)"
             loading="lazy"
-            className="absolute inset-0 w-full h-full object-cover"
-            style={{ objectPosition: 'center 40%' }}
+            className="absolute inset-0 w-full h-full object-contain"
+            style={{ objectPosition: 'center center' }}
           />
           <div
             className="absolute inset-0 flex items-end"
