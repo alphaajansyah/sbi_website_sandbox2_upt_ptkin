@@ -11,7 +11,7 @@ const partners = [
     logoAlt: 'Kementerian Agama Republik Indonesia',
     logoHeight: '56px',
     logoBg: false,
-    logoFilter: 'brightness(0) invert(1)',
+    logoFilter: 'none',
   },
   {
     name: 'Cambridge English',
@@ -40,8 +40,9 @@ const partners = [
     logo: '/assets/images/Belta_Logo-1786649849195.jpeg',
     logoAlt: 'BELTA — British English Language Teaching Association',
     logoHeight: '44px',
-    logoBg: true,
+    logoBg: false,
     logoFilter: 'none',
+    logoBlend: true,
   },
 ];
 
@@ -144,7 +145,13 @@ export default function MitraKredibilitasSection() {
                     <img
                       src={partner?.logo}
                       alt={partner?.logoAlt}
-                      style={{ height: partner?.logoHeight, width: 'auto', objectFit: 'contain', filter: partner?.logoFilter }}
+                      style={{
+                        height: partner?.logoHeight,
+                        width: 'auto',
+                        objectFit: 'contain',
+                        filter: partner?.logoFilter,
+                        mixBlendMode: (partner as any)?.logoBlend ? 'screen' : 'normal',
+                      }}
                     />
                   )}
                 </div>
