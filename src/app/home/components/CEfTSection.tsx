@@ -120,7 +120,7 @@ export default function CEfTSection() {
             <div className="lg:col-span-2">
               <div className="relative overflow-hidden rounded-2xl" style={{ aspectRatio: '4/3' }}>
                 <img
-                  src="/assets/images/tkt_class-1784302666533.jpg"
+                  src="/assets/images/ChatGPT_Image_Aug_14__2026__05_05_29_AM__1_-1786655207389.png"
                   alt="Guru madrasah dalam sesi Cambridge English for Teachers — pelatihan kompetensi Bahasa Inggris profesional"
                   className="absolute inset-0 w-full h-full object-cover"
                 />
