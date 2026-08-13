@@ -90,7 +90,7 @@ export default function PBISection() {
             <div>
               <div className="relative overflow-hidden rounded-2xl" style={{ aspectRatio: '4/3' }}>
                 <img
-                  src="/assets/images/closing_ceremony_hst_2025-00.01.31.056-1784304615636.jpg"
+                  src="/assets/images/pbi__1_-1786656523788.png"
                   alt="Peserta Pesantren Bahasa Inggris dalam upacara penutupan — guru madrasah meraih kualifikasi Cambridge"
                   className="absolute inset-0 w-full h-full object-cover"
                   style={{ objectPosition: 'center 30%' }}
