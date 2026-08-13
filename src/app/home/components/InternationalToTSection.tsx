@@ -56,7 +56,7 @@ export default function InternationalToTSection() {
               {/* Image */}
               <div className="relative overflow-hidden" style={{ aspectRatio: '16/7' }}>
                 <img
-                  src="/assets/images/aaaaaaaa-1786656744885.png"
+                  src="/assets/images/Untitled-1784305093040.png"
                   alt="Peserta Training of Trainers internasional — guru madrasah Indonesia di depan landmark Inggris dalam program CELT"
                   className="absolute inset-0 w-full h-full object-cover"
                   style={{ objectPosition: 'center 30%' }}
