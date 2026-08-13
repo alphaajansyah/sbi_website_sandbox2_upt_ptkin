@@ -166,7 +166,7 @@ export default function InternationalProgrammesSection() {
           {/* Right: large editorial image */}
           <div className="lg:col-span-2 flex flex-col gap-6">
             <ProgrammeImage
-              src="/assets/images/Lingkungan_pembelajaran_bahasa_yang_mendukung_internasionalisasi_PTKIN-1785553092657.png"
+              src="/assets/images/mbi_general__1_-1786657983166.png"
               alt="Mahasiswa internasional dan lokal dalam lingkungan pembelajaran Bahasa Inggris akademik di universitas"
               caption="Lingkungan pembelajaran bahasa yang mendukung internasionalisasi PTKIN"
               objectPosition="center 25%"

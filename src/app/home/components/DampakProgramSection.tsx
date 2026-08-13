@@ -78,7 +78,7 @@ export default function DampakProgramSection() {
           style={{ aspectRatio: '16/7' }}
         >
           <img
-            src="/assets/images/Lingkungan_pembelajaran_bahasa_yang_mendukung_internasionalisasi_PTKIN-1785553092657.png"
+            src="/assets/images/mbi_general__1_-1786657983166.png"
             alt="Guru dan peserta didik madrasah — penerima manfaat nyata dari Program Madrasah Berbahasa Inggris (MBI)"
             loading="lazy"
             className="absolute inset-0 w-full h-full object-cover"
