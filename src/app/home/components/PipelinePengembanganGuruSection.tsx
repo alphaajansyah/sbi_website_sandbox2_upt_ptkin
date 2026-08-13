@@ -4,7 +4,7 @@ import React, { useEffect, useRef, useState } from 'react';
 
 const pipeline = [
   {
-    num: '43.210',
+    num: '43.000+',
     unit: 'Guru',
     label: 'Guru Bahasa Inggris Madrasah',
     sublabel: 'Populasi Nasional',
@@ -232,7 +232,7 @@ export default function PipelinePengembanganGuruSection() {
                 border: '1px solid rgba(184,150,60,0.35)',
               }}
             >
-              <p className="text-4xl font-serif font-bold mb-1" style={{ color: 'var(--gold)' }}>43.210</p>
+              <p className="text-4xl font-serif font-bold mb-1" style={{ color: 'var(--gold)' }}>43.000+</p>
               <p className="text-xs font-bold uppercase tracking-widest mb-2" style={{ color: 'rgba(255,255,255,0.7)' }}>
                 Guru Bahasa Inggris Madrasah
               </p>
