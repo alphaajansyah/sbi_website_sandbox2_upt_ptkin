@@ -19,16 +19,11 @@ export default function Footer() {
 
           {/* Left: Programme Brand */}
           <div>
-            <div className="mb-5 flex items-center gap-4">
+            <div className="mb-5">
               <img
-                src="/assets/images/mbi_logo_transparat_tighter-1786553481962.png"
-                alt="MBI — Madrasah Berbahasa Inggris"
+                src="/assets/images/mbi_image_refined_via_chatgpt-1786649818622.png"
+                alt="Briton English Education — Cambridge English Authorised Centre"
                 className="h-12 w-auto object-contain"
-              />
-              <img
-                src="/assets/images/Cambridge_Landscape_Logo_POS_RGB-1785945867572.png"
-                alt="Cambridge English"
-                className="h-8 w-auto object-contain"
                 style={{ filter: 'brightness(0) invert(1)' }}
               />
             </div>
