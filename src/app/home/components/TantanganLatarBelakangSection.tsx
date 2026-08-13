@@ -82,7 +82,7 @@ export default function TantanganLatarBelakangSection() {
                 }}
               >
                 <div>
-                  <p className="text-3xl md:text-4xl font-serif font-bold" style={{ color: 'var(--gold)' }}>43.210</p>
+                  <p className="text-3xl md:text-4xl font-serif font-bold" style={{ color: 'var(--gold)' }}>43.000+</p>
                   <p className="text-xs font-semibold text-white/70 mt-0.5">Guru Bahasa Inggris Madrasah Nasional</p>
                 </div>
                 <div className="w-px h-12 flex-shrink-0" style={{ background: 'rgba(184,150,60,0.3)' }} />
