@@ -39,10 +39,9 @@ const partners = [
     desc: 'British English Language Teaching Association (BELTA) sebagai mitra pengembangan profesional yang mendukung standar kualitas pengajaran Bahasa Inggris dalam program MBI.',
     logo: '/assets/images/Belta_Logo-1786649849195.jpeg',
     logoAlt: 'BELTA — British English Language Teaching Association',
-    logoHeight: '44px',
-    logoBg: false,
+    logoHeight: '72px',
+    logoBg: true,
     logoFilter: 'none',
-    logoBlend: true,
   },
 ];
 
