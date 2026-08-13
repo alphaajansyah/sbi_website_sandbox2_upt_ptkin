@@ -56,8 +56,8 @@ export default function InternationalToTSection() {
               {/* Image */}
               <div className="relative overflow-hidden" style={{ aspectRatio: '16/7' }}>
                 <img
-                  src="/assets/images/ToT-Graduation-Australia-Kabupat-Hulu-Sungai-Tengah-768x576-1784053872193.jpeg"
-                  alt="Peserta Training of Trainers internasional — guru madrasah Indonesia dalam program CELT di luar negeri"
+                  src="/assets/images/aaaaaaaa-1786656744885.png"
+                  alt="Peserta Training of Trainers internasional — guru madrasah Indonesia di depan landmark Inggris dalam program CELT"
                   className="absolute inset-0 w-full h-full object-cover"
                   style={{ objectPosition: 'center 30%' }}
                 />
@@ -119,7 +119,7 @@ export default function InternationalToTSection() {
               {/* Image */}
               <div className="relative overflow-hidden" style={{ aspectRatio: '16/7' }}>
                 <img
-                  src="/assets/images/ToT-Australia-Kabupaten-Tanah-Bumbub-768x346-1784054533193.jpeg"
+                  src="/assets/images/ToT-Graduation-Australia-Kabupat-Hulu-Sungai-Tengah-768x576-1784053872193.jpeg"
                   alt="Peserta Training of Trainers di Australia — guru madrasah Indonesia dalam program CELT-S"
                   className="absolute inset-0 w-full h-full object-cover"
                   style={{ objectPosition: 'center 30%' }}
