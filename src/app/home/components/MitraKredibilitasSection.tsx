@@ -20,8 +20,8 @@ const partners = [
     logo: '/assets/images/Cambridge_Landscape_Logo_POS_RGB-1785945867572.png',
     logoAlt: 'Cambridge English Language Assessment',
     logoHeight: '36px',
-    logoBg: false,
-    logoFilter: 'brightness(0) invert(1)',
+    logoBg: true,
+    logoFilter: 'none',
   },
   {
     name: 'Briton English Education',

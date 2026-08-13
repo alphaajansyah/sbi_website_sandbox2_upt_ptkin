@@ -19,13 +19,27 @@ export default function Footer() {
 
           {/* Left: Programme Brand */}
           <div>
-            <div className="mb-5">
-              <img
-                src="/assets/images/mbi_image_refined_via_chatgpt-1786649818622.png"
-                alt="Briton English Education — Cambridge English Authorised Centre"
-                className="h-12 w-auto object-contain"
-                style={{ filter: 'brightness(0) invert(1)' }}
-              />
+            <div className="flex items-center gap-4 mb-5">
+              <div
+                className="flex items-center justify-center rounded-lg px-3 py-2"
+                style={{ background: 'rgba(255,255,255,0.95)', display: 'inline-flex' }}
+              >
+                <img
+                  src="/assets/images/mbi_logo_transparat_tighter-1786553481962.png"
+                  alt="MBI — Madrasah Berbahasa Inggris"
+                  className="h-10 w-auto object-contain"
+                />
+              </div>
+              <div
+                className="flex items-center justify-center rounded-lg px-3 py-2"
+                style={{ background: 'rgba(255,255,255,0.95)', display: 'inline-flex' }}
+              >
+                <img
+                  src="/assets/images/Logo_Briton_2026-1784029012948.png"
+                  alt="Briton English Education"
+                  className="h-10 w-auto object-contain"
+                />
+              </div>
             </div>
             <p className="text-xs font-semibold mb-1" style={{ color: 'var(--gold)' }}>
               Cambridge English for Kemenag
