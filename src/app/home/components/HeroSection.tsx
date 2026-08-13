@@ -48,46 +48,55 @@ export default function HeroSection() {
         <div className="noise-overlay" />
       </div>
 
-      {/* MBI credential badge — desktop right side */}
+      {/* Briton credential card — desktop right side */}
       <div
         className="absolute z-10 hidden lg:flex items-center justify-center"
-        style={{ right: '5%', top: '50%', transform: 'translateY(-50%)' }}
+        style={{ right: '4%', top: '50%', transform: 'translateY(-50%)' }}
       >
         <div
-          className="flex flex-col items-center gap-4 px-8 py-8 rounded-2xl"
+          className="flex flex-col items-center gap-6 px-10 py-10 rounded-2xl"
           style={{
-            background: 'rgba(15,35,24,0.65)',
-            border: '1px solid rgba(184,150,60,0.3)',
-            backdropFilter: 'blur(12px)',
-            WebkitBackdropFilter: 'blur(12px)',
-            minWidth: '220px',
+            background: 'rgba(15,35,24,0.70)',
+            border: '1px solid rgba(184,150,60,0.35)',
+            backdropFilter: 'blur(16px)',
+            WebkitBackdropFilter: 'blur(16px)',
+            minWidth: '260px',
+            maxWidth: '300px',
           }}
         >
+          {/* Briton Logo */}
           <img
-            src="/assets/images/mbi_logo_transparat_tighter-1786553481962.png"
-            alt="Madrasah Berbahasa Inggris (MBI)"
-            className="h-16 w-auto object-contain"
+            src="/assets/images/mbi_image_refined_via_chatgpt-1786649818622.png"
+            alt="Briton English Education — Cambridge English Authorised Centre"
+            className="w-full h-auto object-contain"
+            style={{ maxHeight: '80px' }}
           />
           <div className="w-full h-px" style={{ background: 'rgba(184,150,60,0.3)' }} />
-          <div className="text-center">
-            <p className="text-xs font-bold uppercase tracking-widest mb-1" style={{ color: 'var(--gold)' }}>
-              Program Nasional
-            </p>
-            <p className="text-xs text-white/70 leading-relaxed">
-              Kementerian Agama RI<br />Direktorat GTK Madrasah
-            </p>
-          </div>
+          {/* Cambridge credential */}
           <div className="text-center">
             <p className="text-xs font-semibold text-white/50 uppercase tracking-wider">Cambridge English</p>
             <p className="text-xs font-semibold text-white/50 uppercase tracking-wider">Authorised Centre</p>
-            <p className="text-sm font-serif mt-1" style={{ color: 'var(--gold)' }}>ID003</p>
+            <p className="text-sm font-serif mt-1.5" style={{ color: 'var(--gold)' }}>ID003</p>
+          </div>
+          <div className="w-full h-px" style={{ background: 'rgba(184,150,60,0.15)' }} />
+          {/* MBI Programme identity */}
+          <div className="text-center">
+            <p className="text-xs font-bold uppercase tracking-widest mb-1.5" style={{ color: 'var(--gold)' }}>
+              Mitra Implementasi
+            </p>
+            <p className="text-xs text-white/60 leading-relaxed">
+              Madrasah Berbahasa Inggris (MBI)
+            </p>
+            <p className="text-xs text-white/40 leading-relaxed mt-1">
+              Cambridge English for Kemenag
+            </p>
           </div>
         </div>
       </div>
 
       {/* Content */}
       <div className="relative z-10 flex flex-col flex-1 pt-28 pb-20 px-6">
-        <div className="max-w-5xl mx-auto w-full flex flex-col flex-1">
+        <div className="max-w-4xl mx-auto w-full flex flex-col flex-1 lg:mr-[340px]">
 
           {/* Eyebrow */}
           <div className="mb-4 flex items-center gap-3">
@@ -117,8 +126,8 @@ export default function HeroSection() {
               }}
             >
               <img
-                src="/assets/images/mbi_logo_transparat_tighter-1786553481962.png"
-                alt="Madrasah Berbahasa Inggris (MBI)"
+                src="/assets/images/mbi_image_refined_via_chatgpt-1786649818622.png"
+                alt="Briton English Education"
                 className="h-10 w-auto object-contain"
               />
               <div>

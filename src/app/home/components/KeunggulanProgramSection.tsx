@@ -95,58 +95,100 @@ export default function KeunggulanProgramSection() {
           </p>
         </div>
 
-        {/* Feature cards */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          {features?.map((item, i) => (
-            <div
-              key={item?.num}
-              className={`transition-all duration-700 ${revealed ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
-              style={{ transitionDelay: `${i * 120}ms` }}
-            >
+        {/* Two-column layout: cards left, image right */}
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 items-start">
+          {/* Feature cards — left 3 columns */}
+          <div className="lg:col-span-3 grid grid-cols-1 gap-6">
+            {features?.map((item, i) => (
               <div
-                className="h-full p-8 rounded-2xl flex flex-col"
-                style={{
-                  background: 'rgba(255,255,255,0.05)',
-                  border: '1px solid rgba(184,150,60,0.2)',
-                  backdropFilter: 'blur(8px)',
-                }}
+                key={item?.num}
+                className={`transition-all duration-700 ${revealed ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+                style={{ transitionDelay: `${i * 120}ms` }}
               >
-                {/* Icon + number */}
-                <div className="flex items-center gap-3 mb-5">
-                  <div
-                    className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0"
-                    style={{ background: 'rgba(184,150,60,0.15)', color: 'var(--gold)' }}
-                  >
-                    {item?.icon}
-                  </div>
-                  <span className="text-xs font-mono font-bold" style={{ color: 'var(--gold)' }}>
-                    {item?.num}
-                  </span>
-                </div>
-
-                <h3 className="text-lg font-bold text-white mb-1 leading-snug">{item?.title}</h3>
-                <p className="text-xs font-semibold mb-4" style={{ color: 'var(--gold)' }}>{item?.subtitle}</p>
-                <p className="text-sm leading-relaxed mb-6" style={{ color: 'rgba(255,255,255,0.65)' }}>
-                  {item?.body}
-                </p>
-
-                {/* Points */}
-                <div className="mt-auto flex flex-col gap-2">
-                  {item?.points?.map((point, j) => (
-                    <div key={j} className="flex items-start gap-2">
-                      <div
-                        className="w-1.5 h-1.5 rounded-full flex-shrink-0 mt-1.5"
-                        style={{ background: 'var(--gold)' }}
-                      />
-                      <p className="text-xs leading-relaxed" style={{ color: 'rgba(255,255,255,0.55)' }}>
-                        {point}
-                      </p>
+                <div
+                  className="h-full p-7 rounded-2xl flex flex-col"
+                  style={{
+                    background: 'rgba(255,255,255,0.05)',
+                    border: '1px solid rgba(184,150,60,0.2)',
+                    backdropFilter: 'blur(8px)',
+                  }}
+                >
+                  {/* Icon + number */}
+                  <div className="flex items-center gap-3 mb-4">
+                    <div
+                      className="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0"
+                      style={{ background: 'rgba(184,150,60,0.15)', color: 'var(--gold)' }}
+                    >
+                      {item?.icon}
                     </div>
-                  ))}
+                    <span className="text-xs font-mono font-bold" style={{ color: 'var(--gold)' }}>
+                      {item?.num}
+                    </span>
+                  </div>
+
+                  <h3 className="text-base font-bold text-white mb-1 leading-snug">{item?.title}</h3>
+                  <p className="text-xs font-semibold mb-3" style={{ color: 'var(--gold)' }}>{item?.subtitle}</p>
+                  <p className="text-sm leading-relaxed mb-4" style={{ color: 'rgba(255,255,255,0.65)' }}>
+                    {item?.body}
+                  </p>
+
+                  {/* Points */}
+                  <div className="mt-auto flex flex-wrap gap-x-4 gap-y-1.5">
+                    {item?.points?.map((point, j) => (
+                      <div key={j} className="flex items-start gap-2">
+                        <div
+                          className="w-1.5 h-1.5 rounded-full flex-shrink-0 mt-1.5"
+                          style={{ background: 'var(--gold)' }}
+                        />
+                        <p className="text-xs leading-relaxed" style={{ color: 'rgba(255,255,255,0.55)' }}>
+                          {point}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
+            ))}
+          </div>
+
+          {/* Visual element — right 2 columns */}
+          <div
+            className={`lg:col-span-2 transition-all duration-1000 delay-300 ${revealed ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+          >
+            <div className="sticky top-24 flex flex-col gap-4">
+              {/* Main image */}
+              <div
+                className="overflow-hidden rounded-2xl"
+                style={{ border: '1px solid rgba(184,150,60,0.2)' }}
+              >
+                <img
+                  src="/assets/images/mbi_image_refined_via_chatgpt-1786649818622.png"
+                  alt="Transformasi Kompetensi Guru Madrasah Berbasis Standar Cambridge — programme implementation"
+                  className="w-full h-auto object-cover"
+                  style={{ display: 'block' }}
+                />
+              </div>
+
+              {/* Caption card */}
+              <div
+                className="p-5 rounded-2xl"
+                style={{
+                  background: 'rgba(255,255,255,0.05)',
+                  border: '1px solid rgba(184,150,60,0.15)',
+                }}
+              >
+                <p className="text-xs font-bold uppercase tracking-widest mb-2" style={{ color: 'var(--gold)' }}>
+                  Visi Program
+                </p>
+                <p className="text-sm font-semibold text-white leading-snug">
+                  Transformasi Kompetensi Guru Madrasah Berbasis Standar Cambridge
+                </p>
+                <p className="text-xs mt-2 leading-relaxed" style={{ color: 'rgba(255,255,255,0.5)' }}>
+                  Membangun ekosistem pembelajaran Bahasa Inggris yang berkelanjutan di seluruh madrasah Indonesia.
+                </p>
+              </div>
             </div>
-          ))}
+          </div>
         </div>
       </div>
     </section>

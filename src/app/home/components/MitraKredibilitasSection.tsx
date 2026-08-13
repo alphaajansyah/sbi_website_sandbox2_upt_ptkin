@@ -31,9 +31,9 @@ const partners = [
     name: 'BELTA',
     role: 'Mitra Pengembangan Profesional',
     desc: 'British English Language Teaching Association (BELTA) sebagai mitra pengembangan profesional yang mendukung standar kualitas pengajaran Bahasa Inggris dalam program MBI.',
-    logo: '/assets/images/neas-logo-website-01-e1530764222287-1785945867573.png',
+    logo: '/assets/images/Belta_Logo-1786649849195.jpeg',
     logoAlt: 'BELTA — British English Language Teaching Association',
-    logoHeight: '40px',
+    logoHeight: '44px',
   },
 ];
 

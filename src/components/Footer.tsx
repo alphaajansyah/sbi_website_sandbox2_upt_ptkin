@@ -19,20 +19,30 @@ export default function Footer() {
 
           {/* Left: Programme Brand */}
           <div>
-            <div className="mb-4">
+            <div className="mb-5">
               <img
-                src="/assets/images/mbi_logo_transparat_tighter-1786553481962.png"
-                alt="Madrasah Berbahasa Inggris (MBI) — Cambridge English for Kemenag"
+                src="/assets/images/mbi_image_refined_via_chatgpt-1786649818622.png"
+                alt="Briton English Education — Cambridge English Authorised Centre"
                 className="h-12 w-auto object-contain"
+                style={{ filter: 'brightness(0) invert(1)' }}
               />
             </div>
-            <p className="text-xs font-semibold mb-2" style={{ color: 'var(--gold)' }}>
+            <p className="text-xs font-semibold mb-1" style={{ color: 'var(--gold)' }}>
               Cambridge English for Kemenag
             </p>
-            <p className="text-xs font-bold text-white mb-2">Madrasah Berbahasa Inggris (MBI)</p>
-            <p className="text-xs leading-relaxed" style={{ color: 'rgba(255,255,255,0.45)' }}>
+            <p className="text-xs font-bold text-white mb-3">Madrasah Berbahasa Inggris (MBI)</p>
+            <p className="text-xs leading-relaxed mb-4" style={{ color: 'rgba(255,255,255,0.45)' }}>
               Program Nasional Peningkatan Kualifikasi dan Kompetensi Guru Bahasa Inggris Madrasah Berbasis Standar Cambridge.
             </p>
+            <div
+              className="flex items-center gap-2 px-3 py-2 rounded-lg"
+              style={{ background: 'rgba(184,150,60,0.08)', border: '1px solid rgba(184,150,60,0.15)' }}
+            >
+              <div className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: 'var(--gold)' }} />
+              <p className="text-xs" style={{ color: 'rgba(255,255,255,0.5)' }}>
+                Dikembangkan bersama <span style={{ color: 'var(--gold)' }}>Cambridge English</span> &amp; <span style={{ color: 'var(--gold)' }}>Briton English Education</span>
+              </p>
+            </div>
           </div>
 
           {/* Centre: Navigation */}
