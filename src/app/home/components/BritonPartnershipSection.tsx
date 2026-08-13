@@ -116,7 +116,7 @@ export default function BritonPartnershipSection() {
             style={{ transitionDelay: '100ms' }}
           >
             <img
-              src="/assets/images/briton_and_cambridge_logo_white-1785419771590.png"
+              src="/assets/images/Group-1076-1-1-1786654354676.png"
               alt="Briton English Education & Cambridge English logo"
               className="h-12 w-auto object-contain mb-10"
             />

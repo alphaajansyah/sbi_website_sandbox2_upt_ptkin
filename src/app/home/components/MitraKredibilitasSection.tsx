@@ -27,7 +27,7 @@ const partners = [
     name: 'Briton English Education',
     role: 'Mitra Implementasi Program',
     desc: 'Briton English Education sebagai Cambridge English Authorised Exam Centre ID003 yang bertanggung jawab atas implementasi teknis, pelatihan, dan pengelolaan program MBI.',
-    logo: '/assets/images/briton_and_cambridge_logo_white-1785419771590.png',
+    logo: '/assets/images/Group-1076-1-1-1786654354676.png',
     logoAlt: 'Briton English Education',
     logoHeight: '44px',
     logoBg: false,
