@@ -68,8 +68,8 @@ export default function Header() {
           <button onClick={scrollToTop} className="flex items-center gap-3 group" aria-label="Kembali ke atas">
             <div className="flex items-center gap-2">
               <img
-                src="/assets/images/mbi_image_refined_via_chatgpt-1786649818622.png"
-                alt="Briton English Education — Cambridge English Authorised Centre"
+                src="/assets/images/Logo_Briton_2026-1784029012948.png"
+                alt="Briton English Education"
                 className="h-10 w-auto object-contain"
               />
             </div>

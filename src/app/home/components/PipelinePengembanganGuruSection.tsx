@@ -122,8 +122,9 @@ export default function PipelinePengembanganGuruSection() {
                   className="relative flex items-center overflow-hidden"
                   style={{
                     width: `${item?.pct}%`,
-                    minWidth: '220px',
-                    height: item?.highlight ? '72px' : '60px',
+                    minWidth: '260px',
+                    minHeight: item?.highlight ? '72px' : '60px',
+                    height: 'auto',
                     borderRadius: item?.isTop ? '16px 16px 0 0' : i === pipeline?.length - 1 ? '0 0 16px 16px' : '0',
                     background: item?.highlight
                       ? 'linear-gradient(135deg, rgba(184,150,60,0.35) 0%, rgba(184,150,60,0.2) 100%)'
@@ -146,10 +147,10 @@ export default function PipelinePengembanganGuruSection() {
                       animationDelay: `${i * 200}ms`,
                     }}
                   />
-                  <div className="relative z-10 flex items-center justify-between w-full px-5">
-                    <div className="flex items-center gap-4">
+                  <div className="relative z-10 flex items-center justify-between w-full px-5 py-3">
+                    <div className="flex items-center gap-4 flex-1 min-w-0">
                       {/* Number */}
-                      <div className="flex-shrink-0 text-right" style={{ minWidth: '80px' }}>
+                      <div className="flex-shrink-0 text-right" style={{ minWidth: '72px' }}>
                         <p
                           className="font-serif font-bold leading-none"
                           style={{
@@ -167,12 +168,12 @@ export default function PipelinePengembanganGuruSection() {
                         </p>
                       </div>
                       {/* Divider */}
-                      <div className="w-px h-8" style={{ background: 'rgba(184,150,60,0.25)' }} />
+                      <div className="w-px self-stretch" style={{ background: 'rgba(184,150,60,0.25)', minHeight: '32px' }} />
                       {/* Label */}
-                      <div>
+                      <div className="flex-1 min-w-0">
                         <p
                           className="text-sm font-semibold leading-snug"
-                          style={{ color: item?.highlight ? 'var(--gold)' : 'rgba(255,255,255,0.9)' }}
+                          style={{ color: item?.highlight ? 'var(--gold)' : 'rgba(255,255,255,0.9)', wordBreak: 'break-word' }}
                         >
                           {item?.label}
                         </p>
@@ -183,7 +184,7 @@ export default function PipelinePengembanganGuruSection() {
                     </div>
                     {/* Step badge */}
                     <div
-                      className="flex-shrink-0 w-7 h-7 rounded-full flex items-center justify-center text-xs font-mono font-bold"
+                      className="flex-shrink-0 w-7 h-7 rounded-full flex items-center justify-center text-xs font-mono font-bold ml-3"
                       style={{
                         background: item?.highlight ? 'var(--gold)' : 'rgba(184,150,60,0.15)',
                         color: item?.highlight ? 'var(--green-deep)' : 'var(--gold)',
