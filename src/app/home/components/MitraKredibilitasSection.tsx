@@ -9,7 +9,9 @@ const partners = [
     desc: 'Kementerian Agama RI sebagai penyelenggara dan penanggung jawab program MBI secara nasional, memastikan implementasi yang selaras dengan kebijakan pendidikan Islam Indonesia.',
     logo: '/assets/images/Kementerian_Agama_new_logo-1785946257791.png',
     logoAlt: 'Kementerian Agama Republik Indonesia',
-    logoHeight: '48px',
+    logoHeight: '56px',
+    logoBg: false,
+    logoFilter: 'brightness(0) invert(1)',
   },
   {
     name: 'Cambridge English',
@@ -18,14 +20,18 @@ const partners = [
     logo: '/assets/images/Cambridge_Landscape_Logo_POS_RGB-1785945867572.png',
     logoAlt: 'Cambridge English Language Assessment',
     logoHeight: '36px',
+    logoBg: false,
+    logoFilter: 'brightness(0) invert(1)',
   },
   {
     name: 'Briton English Education',
     role: 'Mitra Implementasi Program',
     desc: 'Briton English Education sebagai Cambridge English Authorised Exam Centre ID003 yang bertanggung jawab atas implementasi teknis, pelatihan, dan pengelolaan program MBI.',
-    logo: '/assets/images/Logo_Briton_2026-1784029012948.png',
+    logo: '/assets/images/briton_and_cambridge_logo_white-1785419771590.png',
     logoAlt: 'Briton English Education',
-    logoHeight: '40px',
+    logoHeight: '44px',
+    logoBg: false,
+    logoFilter: 'none',
   },
   {
     name: 'BELTA',
@@ -34,6 +40,8 @@ const partners = [
     logo: '/assets/images/Belta_Logo-1786649849195.jpeg',
     logoAlt: 'BELTA — British English Language Teaching Association',
     logoHeight: '44px',
+    logoBg: true,
+    logoFilter: 'none',
   },
 ];
 
@@ -120,12 +128,25 @@ export default function MitraKredibilitasSection() {
                 }}
               >
                 {/* Logo */}
-                <div className="mb-5 h-12 flex items-center">
-                  <img
-                    src={partner?.logo}
-                    alt={partner?.logoAlt}
-                    style={{ height: partner?.logoHeight, width: 'auto', objectFit: 'contain', filter: 'brightness(0) invert(1)' }}
-                  />
+                <div className="mb-5 h-14 flex items-center">
+                  {partner?.logoBg ? (
+                    <div
+                      className="flex items-center justify-center rounded-lg px-4 py-2"
+                      style={{ background: 'rgba(255,255,255,0.95)', display: 'inline-flex' }}
+                    >
+                      <img
+                        src={partner?.logo}
+                        alt={partner?.logoAlt}
+                        style={{ height: partner?.logoHeight, width: 'auto', objectFit: 'contain' }}
+                      />
+                    </div>
+                  ) : (
+                    <img
+                      src={partner?.logo}
+                      alt={partner?.logoAlt}
+                      style={{ height: partner?.logoHeight, width: 'auto', objectFit: 'contain', filter: partner?.logoFilter }}
+                    />
+                  )}
                 </div>
                 <div className="w-full h-px mb-4" style={{ background: 'rgba(184,150,60,0.2)' }} />
                 <p className="text-xs font-bold uppercase tracking-widest mb-2" style={{ color: 'var(--gold)' }}>
