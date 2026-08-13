@@ -69,7 +69,7 @@ export default function HeroSection() {
             src="/assets/images/mbi_image_refined_via_chatgpt-1786649818622.png"
             alt="Briton English Education — Cambridge English Authorised Centre"
             className="w-full h-auto object-contain"
-            style={{ maxHeight: '80px' }}
+            style={{ maxHeight: '120px' }}
           />
           <div className="w-full h-px" style={{ background: 'rgba(184,150,60,0.3)' }} />
           {/* Cambridge credential */}
@@ -128,7 +128,7 @@ export default function HeroSection() {
               <img
                 src="/assets/images/mbi_image_refined_via_chatgpt-1786649818622.png"
                 alt="Briton English Education"
-                className="h-10 w-auto object-contain"
+                className="h-16 w-auto object-contain"
               />
               <div>
                 <p className="text-xs font-semibold text-white/80">Cambridge English for Kemenag</p>
