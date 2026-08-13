@@ -234,7 +234,7 @@ export default function AlurProgramSection() {
                 </div>
                 {/* Left connector arrow (not last in reversed row) */}
                 {i < 2 && (
-                  <div className="absolute top-1/2 -left-3 -translate-y-1/2 z-10 flex items-center">
+                  <div className="absolute top-1/2 -right-3 -translate-y-1/2 z-10 flex items-center">
                     <svg width="24" height="16" viewBox="0 0 24 16" fill="none">
                       <path d="M24 8H4M10 2L4 8L10 14" stroke="rgba(184,150,60,0.6)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
