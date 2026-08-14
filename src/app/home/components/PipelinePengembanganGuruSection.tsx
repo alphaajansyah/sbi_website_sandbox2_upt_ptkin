@@ -21,7 +21,7 @@ const pipeline = [
     unit: 'Peserta',
     label: 'Cambridge English Skills Test (CEST)',
     sublabel: 'Seleksi Kompetensi Awal',
-    widthPct: 82,
+    widthPct: 95,
     highlight: false,
     isTop: false,
     isBottom: false,
@@ -34,7 +34,7 @@ const pipeline = [
     unit: 'Peserta',
     label: 'Cambridge English for Teachers (CEfT)',
     sublabel: 'Pelatihan Berbasis Cambridge',
-    widthPct: 65,
+    widthPct: 90,
     highlight: false,
     isTop: false,
     isBottom: false,
@@ -47,7 +47,7 @@ const pipeline = [
     unit: 'Peserta',
     label: 'Pesantren Bahasa Inggris (PBI)',
     sublabel: 'Residensial Intensif 200+ Jam',
-    widthPct: 50,
+    widthPct: 84,
     highlight: false,
     isTop: false,
     isBottom: false,
@@ -60,7 +60,7 @@ const pipeline = [
     unit: 'Trainer',
     label: 'Trainer Nasional',
     sublabel: 'International Training of Trainers',
-    widthPct: 36,
+    widthPct: 78,
     highlight: false,
     isTop: false,
     isBottom: false,
@@ -69,11 +69,11 @@ const pipeline = [
     numColor: 'var(--gold)',
   },
   {
-    num: 'Master',
-    unit: 'Trainer',
-    label: '& Lead Trainer',
+    num: '150+',
+    unit: 'Master Trainer',
+    label: 'Master Trainer & Lead Trainer',
     sublabel: 'Kapasitas Nasional Berkelanjutan',
-    widthPct: 24,
+    widthPct: 72,
     highlight: true,
     isTop: false,
     isBottom: true,
@@ -181,10 +181,10 @@ export default function PipelinePengembanganGuruSection() {
                   >
                     {/* Stage row */}
                     <div
-                      className="relative flex items-stretch overflow-hidden mx-auto"
+                      className="relative flex items-stretch overflow-visible mx-auto"
                       style={{
                         width: `${item?.widthPct}%`,
-                        minWidth: '220px',
+                        minWidth: '280px',
                         background: item?.color,
                         border: `1px solid ${item?.borderColor}`,
                         borderRadius: item?.isTop
@@ -218,14 +218,27 @@ export default function PipelinePengembanganGuruSection() {
                         </div>
 
                         {/* Label block */}
-                        <div className="flex-1 min-w-0">
+                        <div className="flex-1" style={{ minWidth: 0 }}>
                           <p
-                            className="text-xs font-semibold leading-snug truncate"
-                            style={{ color: item?.highlight ? 'var(--gold)' : 'rgba(255,255,255,0.80)' }}
+                            className="text-xs font-semibold leading-snug"
+                            style={{
+                              color: item?.highlight ? 'var(--gold)' : 'rgba(255,255,255,0.80)',
+                              wordBreak: 'break-word',
+                              overflowWrap: 'break-word',
+                              whiteSpace: 'normal',
+                            }}
                           >
                             {item?.label}
                           </p>
-                          <p className="text-xs mt-0.5 truncate" style={{ color: 'rgba(255,255,255,0.38)' }}>
+                          <p
+                            className="text-xs mt-0.5"
+                            style={{
+                              color: 'rgba(255,255,255,0.38)',
+                              wordBreak: 'break-word',
+                              overflowWrap: 'break-word',
+                              whiteSpace: 'normal',
+                            }}
+                          >
                             {item?.sublabel}
                           </p>
                         </div>
@@ -236,15 +249,19 @@ export default function PipelinePengembanganGuruSection() {
                             className="font-serif font-bold leading-none"
                             style={{
                               color: item?.numColor,
-                              fontSize: item?.isTop ? '1.65rem' : item?.highlight ? '1.25rem' : '1.35rem',
+                              fontSize: item?.isTop ? '1.65rem' : item?.highlight ? '1.35rem' : '1.35rem',
                               letterSpacing: '-0.02em',
+                              whiteSpace: 'nowrap',
                             }}
                           >
                             {item?.num}
                           </p>
                           <p
                             className="text-xs font-semibold mt-0.5"
-                            style={{ color: item?.highlight ? 'var(--gold)' : 'rgba(255,255,255,0.38)' }}
+                            style={{
+                              color: item?.highlight ? 'var(--gold)' : 'rgba(255,255,255,0.38)',
+                              whiteSpace: 'nowrap',
+                            }}
                           >
                             {item?.unit}
                           </p>
@@ -332,7 +349,7 @@ export default function PipelinePengembanganGuruSection() {
                 border: '1px solid rgba(255,255,255,0.08)',
               }}
             >
-              <div className="flex-1">
+              <div className="flex-1 min-w-0">
                 <p className="text-xs uppercase tracking-widest font-semibold mb-1" style={{ color: 'rgba(255,255,255,0.40)' }}>
                   Rasio Seleksi Nasional
                 </p>
@@ -367,8 +384,18 @@ export default function PipelinePengembanganGuruSection() {
                   }}
                 >
                   <p className="text-xl font-serif font-bold text-white mb-0.5 leading-none">{stat?.val}</p>
-                  <p className="text-xs font-semibold mt-1 mb-0.5" style={{ color: 'var(--gold)' }}>{stat?.label}</p>
-                  <p className="text-xs" style={{ color: 'rgba(255,255,255,0.38)' }}>{stat?.sub}</p>
+                  <p
+                    className="text-xs font-semibold mt-1 mb-0.5 leading-snug"
+                    style={{ color: 'var(--gold)', wordBreak: 'break-word', overflowWrap: 'break-word' }}
+                  >
+                    {stat?.label}
+                  </p>
+                  <p
+                    className="text-xs leading-snug"
+                    style={{ color: 'rgba(255,255,255,0.38)', wordBreak: 'break-word', overflowWrap: 'break-word' }}
+                  >
+                    {stat?.sub}
+                  </p>
                 </div>
               ))}
             </div>
