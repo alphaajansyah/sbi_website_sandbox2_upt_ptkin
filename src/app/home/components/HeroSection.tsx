@@ -145,14 +145,11 @@ export default function HeroSection() {
                 />
               </div>
               <div className="text-center">
-                <p className="text-xs font-bold uppercase tracking-widest mb-1.5" style={{ color: 'var(--gold)' }}>
-                  Mitra Implementasi
+                <p className="text-xs font-semibold text-white/50 uppercase tracking-wider leading-relaxed">
+                  Cambridge Authorised Centre
                 </p>
-                <p className="text-xs text-white/60 leading-relaxed">
-                  Madrasah Berbahasa Inggris (MBI)
-                </p>
-                <p className="text-xs text-white/40 leading-relaxed mt-1">
-                  Cambridge English for Kemenag
+                <p className="text-sm font-serif mt-1" style={{ color: 'var(--gold)' }}>
+                  ID003
                 </p>
               </div>
             </div>
