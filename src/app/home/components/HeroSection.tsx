@@ -125,30 +125,28 @@ export default function HeroSection() {
           {/* MBI badge — mobile */}
           <div className="lg:hidden mb-8 flex">
             <div
-              className="flex items-center gap-4 px-5 py-4 rounded-xl"
+              className="flex items-center gap-3 px-5 py-3 rounded-xl"
               style={{
                 background: 'rgba(255,255,255,0.08)',
                 border: '1px solid rgba(184,150,60,0.25)',
                 backdropFilter: 'blur(8px)',
               }}
             >
-              {/* Stacked logos — MBI on top, Briton below */}
-              <div className="flex flex-col items-center gap-2 flex-shrink-0">
+              <div className="flex flex-col items-center gap-2">
                 <img
-                  src="/assets/images/mbi_logo_transparat_tighter-1786553481962.png"
+                  src="/assets/images/mbi_image_refined_via_chatgpt-1786649818622.png"
                   alt="MBI — Madrasah Berbahasa Inggris"
-                  className="h-10 w-auto object-contain"
+                  className="h-12 w-auto object-contain"
                 />
                 <img
                   src="/assets/images/Group-1076-1-1-1786685465389.png"
                   alt="Briton English Education"
-                  className="h-5 w-auto object-contain"
+                  className="h-6 w-auto object-contain"
                 />
               </div>
-              {/* Text — matches desktop card */}
               <div>
-                <p className="text-xs font-semibold text-white/80 leading-snug">Cambridge English for Kemenag</p>
-                <p className="text-xs leading-snug" style={{ color: 'var(--gold)' }}>Madrasah Berbahasa Inggris (MBI)</p>
+                <p className="text-xs font-semibold text-white/80">Cambridge English for Kemenag</p>
+                <p className="text-xs" style={{ color: 'var(--gold)' }}>Madrasah Berbahasa Inggris (MBI)</p>
               </div>
             </div>
           </div>
