@@ -182,7 +182,7 @@ export default function InternationalToTSection() {
                 Keberlanjutan melalui Trainer Multiplication
               </p>
               <h3 className="text-xl font-bold text-white mb-3">
-                Dari 150 Trainer Nasional ke 43.210 Guru Madrasah
+                Dari 150 Trainer Nasional ke 43.000+ Guru Madrasah
               </h3>
               <p className="text-sm leading-relaxed" style={{ color: 'rgba(255,255,255,0.65)' }}>
                 Master Trainer dan Lead Trainer yang terbentuk melalui program ToT Internasional akan mengimbaskan kompetensi mereka kepada seluruh guru Bahasa Inggris madrasah di Indonesia, memastikan keberlanjutan dan kemandirian sistem pengembangan guru nasional.
@@ -191,7 +191,7 @@ export default function InternationalToTSection() {
             <div className="flex flex-col gap-3">
               {[
                 { num: '150', label: 'Trainer Nasional' },
-                { num: '43.210', label: 'Guru Madrasah' },
+                { num: '43.000+', label: 'Guru Madrasah' },
                 { num: '∞', label: 'Keberlanjutan Sistem' },
               ]?.map((stat, i) => (
                 <div
