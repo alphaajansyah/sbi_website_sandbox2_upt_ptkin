@@ -12,8 +12,8 @@ const PipelinePengembanganGuruSection = dynamic(() => import('./components/Pipel
 const CEfTSection = dynamic(() => import('./components/CEfTSection'), { loading: loadingFallback });
 const PBISection = dynamic(() => import('./components/PBISection'), { loading: loadingFallback });
 const InternationalToTSection = dynamic(() => import('./components/InternationalToTSection'), { loading: loadingFallback });
-const ImplementasiMapelSection = dynamic(() => import('./components/ImplementasiMapelSection'), { loading: loadingFallback });
 const TargetCapaianSiswaSection = dynamic(() => import('./components/TargetCapaianSiswaSection'), { loading: loadingFallback });
+const StandarCapaianSection = dynamic(() => import('./components/StandarCapaianSection'), { loading: loadingFallback });
 const DampakProgramSection = dynamic(() => import('./components/DampakProgramSection'), { loading: loadingFallback });
 const MitraKredibilitasSection = dynamic(() => import('./components/MitraKredibilitasSection'), { loading: loadingFallback });
 const ConsultationFormSection = dynamic(() => import('./components/ConsultationFormSection'), { loading: loadingFallback });
@@ -29,8 +29,8 @@ export default function HomePage() {
       <CEfTSection />
       <PBISection />
       <InternationalToTSection />
-      <ImplementasiMapelSection />
       <TargetCapaianSiswaSection />
+      <StandarCapaianSection />
       <DampakProgramSection />
       <MitraKredibilitasSection />
       <ConsultationFormSection />

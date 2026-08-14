@@ -3,12 +3,12 @@
 import React, { useState, useEffect } from 'react';
 
 const navItems = [
-  { label: 'Program',                href: '#program',              num: '01' },
-  { label: 'Latar Belakang',         href: '#latar-belakang',       num: '02' },
-  { label: 'Alur Program',           href: '#alur-program',         num: '03' },
-  { label: 'Pengembangan Guru',      href: '#pengembangan-guru',    num: '04' },
-  { label: 'Capaian Siswa',          href: '#capaian-siswa',        num: '05' },
-  { label: 'Dampak Program',         href: '#dampak-program',       num: '06' },
+  { label: 'Program',            href: '#program',           num: '01' },
+  { label: 'Latar Belakang',     href: '#latar-belakang',    num: '02' },
+  { label: 'Alur Program',       href: '#alur-program',      num: '03' },
+  { label: 'Pengembangan Guru',  href: '#pengembangan-guru', num: '04' },
+  { label: 'Standar & Capaian',  href: '#standar-capaian',   num: '05' },
+  { label: 'Dampak Program',     href: '#dampak-program',    num: '06' },
 ];
 
 const sectionIds = navItems.map((item) => item.href.replace('#', ''));
