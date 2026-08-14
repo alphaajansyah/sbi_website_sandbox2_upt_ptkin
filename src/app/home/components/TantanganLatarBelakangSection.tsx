@@ -5,12 +5,12 @@ import React, { useEffect, useRef, useState } from 'react';
 const challenges = [
   {
     num: '01',
-    title: 'Kompetensi Guru Belum Merata',
+    title: 'Kompetensi Guru Bahasa Inggris',
     body: 'Sebagian besar guru Bahasa Inggris madrasah belum memiliki kualifikasi internasional yang terstandar, sehingga kualitas pembelajaran belum merata secara nasional.',
   },
   {
     num: '02',
-    title: 'Kebutuhan Pengembangan Profesional Terstruktur',
+    title: 'Implementasi Permendikdasmen No. 13/2025',
     body: 'Kebijakan nasional mewajibkan penguatan pembelajaran Bahasa Inggris di madrasah, yang membutuhkan sistem pengembangan guru yang terstruktur dan berkelanjutan.',
   },
   {
@@ -20,7 +20,7 @@ const challenges = [
   },
   {
     num: '04',
-    title: 'Standarisasi Pembelajaran Berbasis CEFR',
+    title: 'Penguatan Pembelajaran Bahasa Inggris',
     body: 'Madrasah membutuhkan pendekatan pembelajaran yang terstandar secara internasional, berbasis CEFR, dan selaras dengan Kurikulum Nasional Madrasah.',
   },
   {
@@ -31,7 +31,7 @@ const challenges = [
   {
     num: '06',
     title: 'Kapasitas Trainer Nasional',
-    body: 'Indonesia membutuhkan Master Trainer dan Lead Trainer berkualifikasi internasional untuk memastikan keberlanjutan program pengembangan guru secara mandiri.',
+    body: 'Indonesia membutuhkan Master Trainer dan Lead Trainer yang berkualifikasi internasional untuk memastikan keberlanjutan program pengembangan guru secara mandiri.',
   },
 ];
 
@@ -50,28 +50,28 @@ export default function TantanganLatarBelakangSection() {
 
   return (
     <section
-      id="tantangan-nasional"
+      id="latar-belakang"
       ref={sectionRef}
-      className="py-24 px-6"
+      className="py-28 px-6"
       style={{ background: 'var(--fog)' }}
     >
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className={`mb-14 transition-all duration-1000 ${revealed ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 lg:gap-14 items-center">
-            {/* Text */}
+        <div className={`mb-16 transition-all duration-1000 ${revealed ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16 items-center">
+            {/* Text — 55% */}
             <div className="lg:col-span-3">
               <div className="flex items-center gap-3 mb-4">
                 <div className="rule-gold" />
                 <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: 'var(--gold)' }}>
-                  Tantangan Nasional
+                  Tantangan dan Latar Belakang
                 </span>
               </div>
-              <h2 className="question-serif text-3xl md:text-5xl mb-5 max-w-3xl">
+              <h2 className="question-serif text-3xl md:text-5xl mb-6 max-w-3xl">
                 Mengapa Program MBI Diperlukan?
               </h2>
               <p className="text-base md:text-lg leading-relaxed mb-6" style={{ color: 'var(--ink-soft)' }}>
-                Kementerian Agama RI mengelola lebih dari 43.000 guru Bahasa Inggris madrasah di seluruh Indonesia. Variasi kompetensi guru yang signifikan, kebutuhan standarisasi pengembangan profesional, dan hubungan langsung antara kompetensi guru dengan capaian siswa menjadikan program pengembangan sistematis sebagai kebutuhan mendesak.
+                Kementerian Agama RI mengelola lebih dari 43.000 guru Bahasa Inggris madrasah di seluruh Indonesia. Peningkatan kompetensi guru secara sistematis dan terstandar menjadi kebutuhan mendesak untuk mewujudkan madrasah yang berdaya saing internasional.
               </p>
               {/* Key stat */}
               <div
@@ -82,7 +82,7 @@ export default function TantanganLatarBelakangSection() {
                 }}
               >
                 <div>
-                  <p className="text-3xl md:text-4xl font-serif font-bold" style={{ color: 'var(--gold)' }}>43.210+</p>
+                  <p className="text-3xl md:text-4xl font-serif font-bold" style={{ color: 'var(--gold)' }}>43.000+</p>
                   <p className="text-xs font-semibold text-white/70 mt-0.5">Guru Bahasa Inggris Madrasah Nasional</p>
                 </div>
                 <div className="w-px h-12 flex-shrink-0" style={{ background: 'rgba(184,150,60,0.3)' }} />
@@ -91,7 +91,7 @@ export default function TantanganLatarBelakangSection() {
                 </p>
               </div>
             </div>
-            {/* Image */}
+            {/* Image — 45% */}
             <div className="lg:col-span-2">
               <div
                 className="relative overflow-hidden rounded-2xl"
@@ -112,30 +112,30 @@ export default function TantanganLatarBelakangSection() {
           </div>
         </div>
 
-        {/* Challenge grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        {/* Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {challenges?.map((item, i) => (
             <div
               key={item?.num}
               className={`transition-all duration-700 ${revealed ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
-              style={{ transitionDelay: `${i * 70}ms` }}
+              style={{ transitionDelay: `${i * 80}ms` }}
             >
               <div
-                className="h-full p-7 rounded-2xl"
+                className="h-full p-8 rounded-2xl"
                 style={{
                   background: 'white',
                   border: '1px solid rgba(168,176,154,0.2)',
-                  boxShadow: '0 4px 20px rgba(26,58,42,0.05)',
+                  boxShadow: '0 4px 24px rgba(26,58,42,0.06)',
                 }}
               >
-                <div className="flex items-start gap-3 mb-3">
+                <div className="flex items-start gap-4 mb-4">
                   <span
                     className="text-xs font-mono font-bold flex-shrink-0 mt-0.5"
                     style={{ color: 'var(--gold)' }}
                   >
                     {item?.num}
                   </span>
-                  <h3 className="text-sm font-bold leading-snug" style={{ color: 'var(--green-deep)' }}>
+                  <h3 className="text-base font-bold leading-snug" style={{ color: 'var(--green-deep)' }}>
                     {item?.title}
                   </h3>
                 </div>
@@ -149,13 +149,13 @@ export default function TantanganLatarBelakangSection() {
 
         {/* Bottom callout */}
         <div
-          className={`mt-10 p-7 md:p-9 rounded-2xl transition-all duration-1000 delay-500 ${revealed ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+          className={`mt-12 p-8 md:p-10 rounded-2xl transition-all duration-1000 delay-500 ${revealed ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
           style={{
             background: 'var(--green-deep)',
             border: '1px solid rgba(184,150,60,0.2)',
           }}
         >
-          <div className="flex flex-col md:flex-row items-start md:items-center gap-5">
+          <div className="flex flex-col md:flex-row items-start md:items-center gap-6">
             <div className="flex-1">
               <p className="text-xs font-bold uppercase tracking-widest mb-2" style={{ color: 'var(--gold)' }}>
                 Respons Kebijakan Nasional
@@ -169,7 +169,7 @@ export default function TantanganLatarBelakangSection() {
                 const el = document.getElementById('konsultasi');
                 if (el) window.scrollTo({ top: el?.getBoundingClientRect()?.top + window.scrollY - 72, behavior: 'smooth' });
               }}
-              className="btn-gold flex-shrink-0 px-6 py-3 rounded-full text-sm font-bold uppercase tracking-wider"
+              className="btn-gold flex-shrink-0 px-7 py-3.5 rounded-full text-sm font-bold uppercase tracking-wider"
             >
               Konsultasi Program
             </button>
