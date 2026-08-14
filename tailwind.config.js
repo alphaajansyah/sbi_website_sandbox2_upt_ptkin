@@ -14,23 +14,23 @@ module.exports = {
       colors: {
         fog: {
           DEFAULT: '#FAFAF7',
-          dark: '#F2F5F2',
+          dark: '#F5F6F2',
         },
         stone: {
-          ci: '#A8B09A',
-          dark: '#7A8A6E',
+          ci: '#B8C2B5',
+          dark: '#6C7B72',
         },
         navy: {
-          DEFAULT: '#1A3A2A',
+          DEFAULT: '#17382E',
           light: '#2F6B52',
-          deep: '#0F2318',
+          deep: '#102A23',
         },
         green: {
-          DEFAULT: '#1A3A2A',
-          light: '#234D38',
-          deep: '#1E4D3A',
-          mid: '#2D5A3D',
-          sage: '#8FAF8A',
+          DEFAULT: '#4C8A6A',
+          light: '#DCE9E0',
+          deep: '#2F6B52',
+          mid: '#6C9C83',
+          sage: '#C8D9CC',
         },
         gold: {
           DEFAULT: '#D4AF37',
