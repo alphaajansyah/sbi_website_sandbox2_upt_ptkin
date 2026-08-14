@@ -146,7 +146,7 @@ export default function HeroSection() {
               </div>
               <div className="text-center">
                 <p className="text-xs font-semibold text-white/50 uppercase tracking-wider leading-relaxed">
-                  Cambridge Authorised Centre
+                  Cambridge English Authorised Centre
                 </p>
                 <p className="text-sm font-serif mt-1" style={{ color: 'var(--gold)' }}>
                   ID003
