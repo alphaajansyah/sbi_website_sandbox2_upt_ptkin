@@ -54,7 +54,7 @@ export default function HeroSection() {
         style={{ right: '4%', top: '50%', transform: 'translateY(-50%)' }}
       >
         <div
-          className="flex flex-col items-center gap-6 px-10 py-10 rounded-2xl"
+          className="flex flex-col items-center gap-5 px-10 py-10 rounded-2xl"
           style={{
             background: 'rgba(15,35,24,0.70)',
             border: '1px solid rgba(184,150,60,0.35)',
@@ -64,12 +64,19 @@ export default function HeroSection() {
             maxWidth: '300px',
           }}
         >
-          {/* Briton Logo */}
+          {/* MBI Logo — Primary identity */}
           <img
             src="/assets/images/mbi_image_refined_via_chatgpt-1786649818622.png"
-            alt="Briton English Education — Cambridge English Authorised Centre"
+            alt="MBI — Madrasah Berbahasa Inggris"
             className="w-full h-auto object-contain"
-            style={{ maxHeight: '120px' }}
+            style={{ maxHeight: '110px' }}
+          />
+          {/* Briton English Education Logo — Secondary identity */}
+          <img
+            src="/assets/images/Group-1076-1-1-1786685465389.png"
+            alt="Briton English Education"
+            className="w-auto h-auto object-contain"
+            style={{ maxHeight: '52px', maxWidth: '180px' }}
           />
           <div className="w-full h-px" style={{ background: 'rgba(184,150,60,0.3)' }} />
           {/* Cambridge credential */}
@@ -125,11 +132,18 @@ export default function HeroSection() {
                 backdropFilter: 'blur(8px)',
               }}
             >
-              <img
-                src="/assets/images/mbi_image_refined_via_chatgpt-1786649818622.png"
-                alt="Briton English Education"
-                className="h-16 w-auto object-contain"
-              />
+              <div className="flex flex-col items-center gap-2">
+                <img
+                  src="/assets/images/mbi_image_refined_via_chatgpt-1786649818622.png"
+                  alt="MBI — Madrasah Berbahasa Inggris"
+                  className="h-12 w-auto object-contain"
+                />
+                <img
+                  src="/assets/images/Group-1076-1-1-1786685465389.png"
+                  alt="Briton English Education"
+                  className="h-6 w-auto object-contain"
+                />
+              </div>
               <div>
                 <p className="text-xs font-semibold text-white/80">Cambridge English for Kemenag</p>
                 <p className="text-xs" style={{ color: 'var(--gold)' }}>Madrasah Berbahasa Inggris (MBI)</p>
