@@ -5,8 +5,8 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@300;400;500;600;700;800&display=swap');
 
 :root {
-  --fog: #F5F4F0;
-  --fog-dark: #E8E6DF;
+  --fog: #FAFAF7;
+  --fog-dark: #F2F5F2;
   --stone: #A8B09A;
   --stone-dark: #7A8A6E;
   --navy: #1A3A2A;
@@ -14,10 +14,10 @@
   --navy-deep: #0F2318;
   --green: #1A3A2A;
   --green-light: #234D38;
-  --green-deep: #0F2318;
+  --green-deep: #1E4D3A;
   --green-mid: #2D5A3D;
   --green-sage: #8FAF8A;
-  --gold: #B8963C;
+  --gold: #D4AF37;
   --gold-light: #CCA84A;
   --gold-pale: #F0E4C0;
   --ink: #1C2B1E;

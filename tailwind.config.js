@@ -13,8 +13,8 @@ module.exports = {
       },
       colors: {
         fog: {
-          DEFAULT: '#F5F4F0',
-          dark: '#E8E6DF',
+          DEFAULT: '#FAFAF7',
+          dark: '#F2F5F2',
         },
         stone: {
           ci: '#A8B09A',
@@ -22,18 +22,18 @@ module.exports = {
         },
         navy: {
           DEFAULT: '#1A3A2A',
-          light: '#234D38',
+          light: '#2F6B52',
           deep: '#0F2318',
         },
         green: {
           DEFAULT: '#1A3A2A',
           light: '#234D38',
-          deep: '#0F2318',
+          deep: '#1E4D3A',
           mid: '#2D5A3D',
           sage: '#8FAF8A',
         },
         gold: {
-          DEFAULT: '#B8963C',
+          DEFAULT: '#D4AF37',
           light: '#CCA84A',
           pale: '#F0E4C0',
         },
