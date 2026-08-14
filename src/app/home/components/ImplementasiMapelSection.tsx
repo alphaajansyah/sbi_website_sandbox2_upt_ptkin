@@ -125,6 +125,45 @@ export default function ImplementasiMapelSection() {
           ))}
         </div>
 
+        {/* Cambridge books and certificates image */}
+        <div
+          className={`flex flex-col lg:flex-row items-center gap-10 mb-12 transition-all duration-1000 delay-400 ${revealed ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+        >
+          {/* Left: supporting text */}
+          <div className="lg:w-2/5 w-full flex flex-col justify-center">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="rule-gold" />
+              <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: 'var(--gold)' }}>
+                Standar Cambridge
+              </span>
+            </div>
+            <h3 className="text-xl md:text-2xl font-serif font-bold mb-3" style={{ color: 'var(--green-deep)' }}>
+              Pembelajaran &amp; Asesmen Berstandar Cambridge
+            </h3>
+            <p className="text-sm leading-relaxed" style={{ color: 'var(--ink-soft)' }}>
+              Seluruh materi, metodologi, dan asesmen dalam program MBI mengacu pada standar internasional Cambridge — mulai dari buku teks, modul pelatihan guru, hingga sertifikasi yang diakui secara global. Hal ini memastikan kualitas pembelajaran Bahasa Inggris di madrasah setara dengan standar terbaik dunia.
+            </p>
+          </div>
+
+          {/* Right: Cambridge books and certificates image */}
+          <div className="lg:w-3/5 w-full">
+            <div
+              className="rounded-2xl overflow-hidden"
+              style={{
+                boxShadow: '0 8px 40px rgba(26,58,42,0.10)',
+                border: '1px solid rgba(168,176,154,0.18)',
+              }}
+            >
+              <img
+                src="/assets/images/cambridge_books_and_ceqs-1786749977702.png"
+                alt="Buku teks dan sertifikat Cambridge yang digunakan dalam program pembelajaran dan asesmen Bahasa Inggris berstandar internasional"
+                className="w-full h-auto object-contain block"
+                style={{ maxHeight: '420px', objectPosition: 'center' }}
+              />
+            </div>
+          </div>
+        </div>
+
         {/* CEFR progression visual */}
         <div
           className={`p-8 md:p-10 rounded-2xl transition-all duration-1000 delay-500 ${revealed ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
