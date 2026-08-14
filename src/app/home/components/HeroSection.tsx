@@ -144,9 +144,16 @@ export default function HeroSection() {
                   className="h-6 w-auto object-contain"
                 />
               </div>
-              <div>
-                <p className="text-xs font-semibold text-white/80">Cambridge English for Kemenag</p>
-                <p className="text-xs" style={{ color: 'var(--gold)' }}>Madrasah Berbahasa Inggris (MBI)</p>
+              <div className="text-center">
+                <p className="text-xs font-bold uppercase tracking-widest mb-1.5" style={{ color: 'var(--gold)' }}>
+                  Mitra Implementasi
+                </p>
+                <p className="text-xs text-white/60 leading-relaxed">
+                  Madrasah Berbahasa Inggris (MBI)
+                </p>
+                <p className="text-xs text-white/40 leading-relaxed mt-1">
+                  Cambridge English for Kemenag
+                </p>
               </div>
             </div>
           </div>
