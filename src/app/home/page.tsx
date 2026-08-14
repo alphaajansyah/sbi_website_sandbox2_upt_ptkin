@@ -7,7 +7,6 @@ const loadingFallback = () => <div className="py-16" />;
 
 const HeroSection = dynamic(() => import('./components/HeroSection'), { ssr: true, loading: loadingFallback });
 const TantanganLatarBelakangSection = dynamic(() => import('./components/TantanganLatarBelakangSection'), { loading: loadingFallback });
-const KeunggulanProgramSection = dynamic(() => import('./components/KeunggulanProgramSection'), { loading: loadingFallback });
 const AlurProgramSection = dynamic(() => import('./components/AlurProgramSection'), { loading: loadingFallback });
 const PipelinePengembanganGuruSection = dynamic(() => import('./components/PipelinePengembanganGuruSection'), { loading: loadingFallback });
 const CEfTSection = dynamic(() => import('./components/CEfTSection'), { loading: loadingFallback });
@@ -25,7 +24,6 @@ export default function HomePage() {
       <Header />
       <HeroSection />
       <TantanganLatarBelakangSection />
-      <KeunggulanProgramSection />
       <AlurProgramSection />
       <PipelinePengembanganGuruSection />
       <CEfTSection />
