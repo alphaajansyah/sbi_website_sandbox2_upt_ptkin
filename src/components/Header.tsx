@@ -3,12 +3,14 @@
 import React, { useState, useEffect } from 'react';
 
 const navItems = [
-  { label: 'Program',                href: '#program',              num: '01' },
-  { label: 'Latar Belakang',         href: '#latar-belakang',       num: '02' },
-  { label: 'Alur Program',           href: '#alur-program',         num: '03' },
-  { label: 'Pengembangan Guru',      href: '#pengembangan-guru',    num: '04' },
-  { label: 'Capaian Siswa',          href: '#capaian-siswa',        num: '05' },
-  { label: 'Dampak Program',         href: '#dampak-program',       num: '06' },
+  { label: 'Gambaran Umum', href: '#sekilas-mbi', num: '01' },
+  { label: 'Tantangan', href: '#tantangan-nasional', num: '02' },
+  { label: 'Program', href: '#komponen-program', num: '03' },
+  { label: 'Pengembangan Guru', href: '#jalur-pengembangan-guru', num: '04' },
+  { label: 'Capaian Siswa', href: '#capaian-siswa', num: '05' },
+  { label: 'Dampak', href: '#dampak-nasional', num: '06' },
+  { label: 'Mitra', href: '#standar-kredibilitas', num: '07' },
+  { label: 'Kontak', href: '#konsultasi', num: '08' },
 ];
 
 const sectionIds = navItems.map((item) => item.href.replace('#', ''));
@@ -70,20 +72,20 @@ export default function Header() {
               <img
                 src="/assets/images/Group-1098-1-1786654279025.png"
                 alt="Briton English Education"
-                className="h-10 w-auto object-contain"
+                className="h-9 w-auto object-contain"
               />
             </div>
           </button>
 
           {/* Desktop nav */}
-          <div className="hidden lg:flex items-center gap-5 ml-8">
+          <div className="hidden xl:flex items-center gap-4 ml-6">
             {navItems.map((item) => (
               <button
                 key={item.href}
                 onClick={() => handleNavClick(item.href)}
                 className={`nav-anchor text-xs font-semibold uppercase tracking-widest transition-colors duration-300 ${
                   activeSection === item.href.replace('#', '')
-                    ? 'text-white active' : 'text-white/60 hover:text-white'
+                    ? 'text-white active' : 'text-white/55 hover:text-white'
                 }`}
               >
                 {item.label}
@@ -91,8 +93,19 @@ export default function Header() {
             ))}
           </div>
 
-          {/* Desktop CTA + Mobile hamburger */}
-          <div className="flex items-center gap-3">
+          {/* Desktop CTAs + Mobile hamburger */}
+          <div className="flex items-center gap-2">
+            <button
+              onClick={() => handleNavClick('#konsultasi')}
+              className="hidden md:block px-4 py-2 rounded-full text-xs font-semibold border transition-colors duration-200"
+              style={{
+                borderColor: 'rgba(184,150,60,0.35)',
+                color: 'rgba(255,255,255,0.7)',
+                background: 'transparent',
+              }}
+            >
+              Unduh Brief
+            </button>
             <button
               onClick={() => handleNavClick('#konsultasi')}
               className="btn-gold hidden md:block px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider"
@@ -102,7 +115,7 @@ export default function Header() {
             {/* Hamburger */}
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
-              className="lg:hidden flex flex-col gap-1.5 p-2 rounded"
+              className="xl:hidden flex flex-col gap-1.5 p-2 rounded"
               aria-label="Toggle navigation"
               aria-expanded={mobileOpen}
             >
@@ -124,9 +137,9 @@ export default function Header() {
 
         {/* Mobile / overlay menu */}
         <div
-          className="lg:hidden overflow-hidden transition-all duration-300"
+          className="xl:hidden overflow-hidden transition-all duration-300"
           style={{
-            maxHeight: mobileOpen ? '560px' : '0',
+            maxHeight: mobileOpen ? '600px' : '0',
             borderTop: mobileOpen ? '1px solid rgba(184, 150, 60, 0.15)' : 'none',
           }}
         >
@@ -161,12 +174,25 @@ export default function Header() {
               })}
             </div>
 
-            <button
-              onClick={() => handleNavClick('#konsultasi')}
-              className="btn-gold mt-4 px-5 py-3 rounded-full text-xs font-bold uppercase tracking-wider text-center"
-            >
-              Konsultasi Program
-            </button>
+            <div className="flex flex-col gap-2 mt-4">
+              <button
+                onClick={() => handleNavClick('#konsultasi')}
+                className="px-5 py-3 rounded-full text-xs font-semibold border text-center transition-colors duration-200"
+                style={{
+                  borderColor: 'rgba(184,150,60,0.35)',
+                  color: 'rgba(255,255,255,0.7)',
+                  background: 'transparent',
+                }}
+              >
+                Unduh Programme Brief
+              </button>
+              <button
+                onClick={() => handleNavClick('#konsultasi')}
+                className="btn-gold px-5 py-3 rounded-full text-xs font-bold uppercase tracking-wider text-center"
+              >
+                Konsultasi Program
+              </button>
+            </div>
           </div>
         </div>
       </nav>
