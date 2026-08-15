@@ -19,19 +19,44 @@ export default function Footer() {
 
           {/* Left: Programme Brand */}
           <div>
-            <div className="mb-4">
-              <img
-                src="/assets/images/Group-1076-1-1-1785412782488.png"
-                alt="Briton English Education"
-                className="h-10 w-auto object-contain"
-              />
+            <div className="flex items-center gap-4 mb-5">
+              <div
+                className="flex items-center justify-center rounded-lg px-3 py-2"
+                style={{ background: 'rgba(255,255,255,0.95)', display: 'inline-flex' }}
+              >
+                <img
+                  src="/assets/images/mbi_logo_transparat_tighter-1786553481962.png"
+                  alt="MBI — Madrasah Berbahasa Inggris"
+                  className="h-10 w-auto object-contain"
+                />
+              </div>
+              <div
+                className="flex items-center justify-center rounded-lg px-3 py-2"
+                style={{ background: 'rgba(255,255,255,0.95)', display: 'inline-flex' }}
+              >
+                <img
+                  src="/assets/images/Logo_Briton_2026-1784029012948.png"
+                  alt="Briton English Education"
+                  className="h-10 w-auto object-contain"
+                />
+              </div>
             </div>
-            <p className="text-xs font-semibold mb-2" style={{ color: 'var(--gold)' }}>
-              Pengembangan & Pendampingan UPT Pusat Bahasa
+            <p className="text-xs font-semibold mb-1" style={{ color: 'var(--gold)' }}>
+              Cambridge English for Kemenag
             </p>
-            <p className="text-xs leading-relaxed" style={{ color: 'rgba(255,255,255,0.45)' }}>
-              Program pengembangan dan pendampingan UPT Pusat Bahasa Bertaraf Internasional untuk Perguruan Tinggi Keagamaan Islam Negeri.
+            <p className="text-xs font-bold text-white mb-3">Madrasah Berbahasa Inggris (MBI)</p>
+            <p className="text-xs leading-relaxed mb-4" style={{ color: 'rgba(255,255,255,0.45)' }}>
+              Program Nasional Peningkatan Kualifikasi dan Kompetensi Guru Bahasa Inggris Madrasah Berbasis Standar Cambridge.
             </p>
+            <div
+              className="flex items-center gap-2 px-3 py-2 rounded-lg"
+              style={{ background: 'rgba(184,150,60,0.08)', border: '1px solid rgba(184,150,60,0.15)' }}
+            >
+              <div className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: 'var(--gold)' }} />
+              <p className="text-xs" style={{ color: 'rgba(255,255,255,0.5)' }}>
+                Dikembangkan bersama <span style={{ color: 'var(--gold)' }}>Cambridge English</span> &amp; <span style={{ color: 'var(--gold)' }}>Briton English Education</span>
+              </p>
+            </div>
           </div>
 
           {/* Centre: Navigation */}
@@ -41,10 +66,11 @@ export default function Footer() {
             </p>
             <div className="flex flex-col gap-3">
               {[
-                { label: 'Mengapa UPT Bahasa', href: '#mengapa-upt-bahasa' },
-                { label: 'Model Pengembangan', href: '#model-pengembangan' },
-                { label: 'Program Internasional', href: '#program-internasional' },
-                { label: 'Tahapan Implementasi', href: '#tahapan-implementasi' },
+                { label: 'Latar Belakang Program', href: '#latar-belakang' },
+                { label: 'Alur Program Nasional', href: '#alur-program' },
+                { label: 'Pipeline Pengembangan Guru', href: '#pengembangan-guru' },
+                { label: 'Cambridge English for Teachers', href: '#ceft' },
+                { label: 'Capaian Siswa', href: '#capaian-siswa' },
                 { label: 'Dampak Program', href: '#dampak-program' },
                 { label: 'Konsultasi Program', href: '#konsultasi' },
               ].map((link) => (
@@ -66,14 +92,12 @@ export default function Footer() {
               Kontak
             </p>
             <div className="flex flex-col gap-4">
-              {/* Company info */}
               <div>
                 <p className="text-xs font-semibold text-white mb-0.5">Briton English Education</p>
                 <p className="text-xs" style={{ color: 'rgba(255,255,255,0.45)' }}>
                   Cambridge English Authorised Exam Centre ID003
                 </p>
               </div>
-              {/* Contact details */}
               <div>
                 <p className="text-xs font-semibold text-white mb-0.5">Email</p>
                 <p className="text-xs" style={{ color: 'rgba(255,255,255,0.45)' }}>sbi@britonenglish.id</p>
@@ -98,7 +122,7 @@ export default function Footer() {
           style={{ borderTop: '1px solid rgba(255,255,255,0.06)' }}
         >
           <p className="text-xs" style={{ color: 'rgba(255,255,255,0.35)' }}>
-            © 2026 Briton English Education. All rights reserved. Program Pengembangan UPT Pusat Bahasa Bertaraf Internasional untuk PTKIN.
+            © 2026 Cambridge English for Kemenag — Madrasah Berbahasa Inggris (MBI). Program Nasional Peningkatan Kompetensi Guru Bahasa Inggris Madrasah.
           </p>
           <div className="flex items-center gap-6">
             <a href="#" className="text-xs transition-colors hover:text-white" style={{ color: 'rgba(255,255,255,0.35)' }}>

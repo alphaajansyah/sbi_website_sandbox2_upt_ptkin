@@ -9,7 +9,7 @@ interface FormData {
   provinsi: string;
   email: string;
   whatsapp: string;
-  kondisiUPT: string;
+  jenisInstansi: string;
   prioritasPengembangan: string;
   pesan: string;
   consent: boolean;
@@ -18,20 +18,26 @@ interface FormData {
 
 type FormStatus = 'idle' | 'loading' | 'success' | 'error';
 
-const kondisiOptions = [
-  { value: 'belum-tersedia', label: 'Belum tersedia' },
-  { value: 'sudah-tersedia-perlu-dikembangkan', label: 'Sudah tersedia dan perlu dikembangkan' },
-  { value: 'sudah-berjalan-ingin-meningkatkan', label: 'Sudah berjalan dan ingin meningkatkan layanan' },
+const jenisInstansiOptions = [
+  { value: 'kemenag-pusat', label: 'Kementerian Agama RI (Pusat)' },
+  { value: 'kanwil-kemenag', label: 'Kanwil Kemenag Provinsi' },
+  { value: 'kemenag-kabkota', label: 'Kemenag Kabupaten/Kota' },
+  { value: 'madrasah-aliyah', label: 'Madrasah Aliyah (MA)' },
+  { value: 'madrasah-tsanawiyah', label: 'Madrasah Tsanawiyah (MTs)' },
+  { value: 'madrasah-ibtidaiyah', label: 'Madrasah Ibtidaiyah (MI)' },
+  { value: 'pemda', label: 'Pemerintah Daerah' },
+  { value: 'mitra-pendidikan', label: 'Mitra Pendidikan' },
   { value: 'lainnya', label: 'Lainnya' },
 ];
 
 const prioritasOptions = [
-  { value: 'penguatan-sdm', label: 'Penguatan SDM' },
-  { value: 'program-bahasa', label: 'Program Bahasa' },
-  { value: 'sertifikasi-internasional', label: 'Sertifikasi Internasional' },
-  { value: 'sistem-pengelolaan', label: 'Sistem Pengelolaan' },
-  { value: 'pengembangan-layanan', label: 'Pengembangan Layanan' },
-  { value: 'pengembangan-upt-menyeluruh', label: 'Pengembangan UPT secara menyeluruh' },
+  { value: 'implementasi-mbi', label: 'Implementasi Program MBI' },
+  { value: 'pelatihan-guru', label: 'Pelatihan Guru Bahasa Inggris' },
+  { value: 'cest', label: 'Cambridge English Skills Test (CEST)' },
+  { value: 'ceft', label: 'Cambridge English for Teachers (CEfT)' },
+  { value: 'pbi', label: 'Pesantren Bahasa Inggris (PBI)' },
+  { value: 'tot-internasional', label: 'International Training of Trainers' },
+  { value: 'informasi-umum', label: 'Informasi Umum Program MBI' },
 ];
 
 export default function ConsultationFormSection() {
@@ -44,7 +50,7 @@ export default function ConsultationFormSection() {
     provinsi: '',
     email: '',
     whatsapp: '',
-    kondisiUPT: '',
+    jenisInstansi: '',
     prioritasPengembangan: '',
     pesan: '',
     consent: false,
@@ -66,14 +72,14 @@ export default function ConsultationFormSection() {
     const newErrors: Partial<Record<keyof FormData, string>> = {};
     if (!formData.namaLengkap.trim()) newErrors.namaLengkap = 'Nama lengkap wajib diisi.';
     if (!formData.jabatan.trim()) newErrors.jabatan = 'Jabatan wajib diisi.';
-    if (!formData.instansi.trim()) newErrors.instansi = 'Institusi / PTKIN wajib diisi.';
+    if (!formData.instansi.trim()) newErrors.instansi = 'Nama instansi wajib diisi.';
     if (!formData.provinsi.trim()) newErrors.provinsi = 'Provinsi wajib diisi.';
     if (!formData.email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
       newErrors.email = 'Alamat email tidak valid.';
     }
     if (!formData.whatsapp.trim()) newErrors.whatsapp = 'Nomor WhatsApp wajib diisi.';
-    if (!formData.kondisiUPT) newErrors.kondisiUPT = 'Pilih kondisi UPT Bahasa Anda.';
-    if (!formData.prioritasPengembangan) newErrors.prioritasPengembangan = 'Pilih prioritas pengembangan.';
+    if (!formData.jenisInstansi) newErrors.jenisInstansi = 'Pilih jenis instansi Anda.';
+    if (!formData.prioritasPengembangan) newErrors.prioritasPengembangan = 'Pilih topik konsultasi.';
     if (!formData.consent) newErrors.consent = 'Persetujuan diperlukan untuk melanjutkan.';
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
@@ -109,7 +115,7 @@ export default function ConsultationFormSection() {
           provinsi: formData.provinsi,
           email: formData.email,
           whatsapp: formData.whatsapp,
-          programDiminati: formData.kondisiUPT,
+          programDiminati: formData.jenisInstansi,
           skalaPogram: formData.prioritasPengembangan,
           pesan: formData.pesan,
           website: formData.website,
@@ -145,14 +151,14 @@ export default function ConsultationFormSection() {
           <div className="flex items-center gap-3 mb-4">
             <div className="rule-gold" />
             <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: 'var(--gold)' }}>
-              Konsultasi Program
+              Konsultasi Program MBI
             </span>
           </div>
           <h2 className="question-serif text-4xl md:text-5xl mb-4">
-            Konsultasi Pengembangan UPT Bahasa PTKIN
+            Konsultasi Program MBI
           </h2>
           <p className="text-sm leading-relaxed" style={{ color: 'var(--ink-soft)' }}>
-            Isi formulir di bawah ini. Tim Briton English Education akan menghubungi Anda untuk mendiskusikan kebutuhan dan rencana pengembangan UPT Pusat Bahasa di institusi Anda.
+            Hubungi tim kami untuk mendiskusikan implementasi Program Madrasah Berbahasa Inggris (MBI) di wilayah atau satuan pendidikan Anda.
           </p>
         </div>
 
@@ -172,7 +178,7 @@ export default function ConsultationFormSection() {
                 Permintaan konsultasi berhasil dikirim.
               </h3>
               <p className="text-sm max-w-sm" style={{ color: 'var(--ink-soft)' }}>
-                Tim Briton English Education akan menghubungi Anda untuk mendiskusikan kebutuhan pengembangan UPT Pusat Bahasa di institusi Anda.
+                Tim kami akan menghubungi Anda untuk mendiskusikan implementasi Program MBI di wilayah atau satuan pendidikan Anda.
               </p>
             </div>
           ) : (
@@ -226,19 +232,40 @@ export default function ConsultationFormSection() {
                 {/* Instansi */}
                 <div>
                   <label className="block text-xs font-semibold mb-2" style={{ color: 'var(--green-deep)' }}>
-                    Institusi / PTKIN <span style={{ color: 'var(--gold)' }}>*</span>
+                    Nama Instansi <span style={{ color: 'var(--gold)' }}>*</span>
                   </label>
                   <input
                     type="text"
                     name="instansi"
                     value={formData.instansi}
                     onChange={handleChange}
-                    placeholder="Nama PTKIN atau institusi"
+                    placeholder="Nama instansi atau madrasah"
                     className={inputClass('instansi')}
                     style={{ color: 'var(--ink)' }}
                     aria-required="true"
                   />
                   {errors.instansi && <p className="text-xs mt-1 text-red-500">{errors.instansi}</p>}
+                </div>
+
+                {/* Jenis Instansi */}
+                <div>
+                  <label className="block text-xs font-semibold mb-2" style={{ color: 'var(--green-deep)' }}>
+                    Jenis Instansi <span style={{ color: 'var(--gold)' }}>*</span>
+                  </label>
+                  <select
+                    name="jenisInstansi"
+                    value={formData.jenisInstansi}
+                    onChange={handleChange}
+                    className={inputClass('jenisInstansi')}
+                    style={{ color: formData.jenisInstansi ? 'var(--ink)' : 'rgba(0,0,0,0.4)' }}
+                    aria-required="true"
+                  >
+                    <option value="">Pilih jenis instansi</option>
+                    {jenisInstansiOptions.map((opt) => (
+                      <option key={opt.value} value={opt.value}>{opt.label}</option>
+                    ))}
+                  </select>
+                  {errors.jenisInstansi && <p className="text-xs mt-1 text-red-500">{errors.jenisInstansi}</p>}
                 </div>
 
                 {/* Provinsi */}
@@ -269,7 +296,7 @@ export default function ConsultationFormSection() {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    placeholder="email@institusi.ac.id"
+                    placeholder="alamat@email.com"
                     className={inputClass('email')}
                     style={{ color: 'var(--ink)' }}
                     aria-required="true"
@@ -295,41 +322,20 @@ export default function ConsultationFormSection() {
                   {errors.whatsapp && <p className="text-xs mt-1 text-red-500">{errors.whatsapp}</p>}
                 </div>
 
-                {/* Kondisi UPT */}
+                {/* Topik Konsultasi */}
                 <div className="md:col-span-2">
                   <label className="block text-xs font-semibold mb-2" style={{ color: 'var(--green-deep)' }}>
-                    Kondisi UPT Bahasa <span style={{ color: 'var(--gold)' }}>*</span>
-                  </label>
-                  <select
-                    name="kondisiUPT"
-                    value={formData.kondisiUPT}
-                    onChange={handleChange}
-                    className={inputClass('kondisiUPT')}
-                    style={{ color: formData.kondisiUPT ? 'var(--ink)' : '#9ca3af' }}
-                    aria-required="true"
-                  >
-                    <option value="" disabled>Pilih kondisi UPT Bahasa di institusi Anda</option>
-                    {kondisiOptions.map((opt) => (
-                      <option key={opt.value} value={opt.value}>{opt.label}</option>
-                    ))}
-                  </select>
-                  {errors.kondisiUPT && <p className="text-xs mt-1 text-red-500">{errors.kondisiUPT}</p>}
-                </div>
-
-                {/* Prioritas Pengembangan */}
-                <div className="md:col-span-2">
-                  <label className="block text-xs font-semibold mb-2" style={{ color: 'var(--green-deep)' }}>
-                    Prioritas Pengembangan <span style={{ color: 'var(--gold)' }}>*</span>
+                    Topik Konsultasi <span style={{ color: 'var(--gold)' }}>*</span>
                   </label>
                   <select
                     name="prioritasPengembangan"
                     value={formData.prioritasPengembangan}
                     onChange={handleChange}
                     className={inputClass('prioritasPengembangan')}
-                    style={{ color: formData.prioritasPengembangan ? 'var(--ink)' : '#9ca3af' }}
+                    style={{ color: formData.prioritasPengembangan ? 'var(--ink)' : 'rgba(0,0,0,0.4)' }}
                     aria-required="true"
                   >
-                    <option value="" disabled>Pilih prioritas pengembangan utama</option>
+                    <option value="">Pilih topik konsultasi</option>
                     {prioritasOptions.map((opt) => (
                       <option key={opt.value} value={opt.value}>{opt.label}</option>
                     ))}
@@ -340,15 +346,15 @@ export default function ConsultationFormSection() {
                 {/* Pesan */}
                 <div className="md:col-span-2">
                   <label className="block text-xs font-semibold mb-2" style={{ color: 'var(--green-deep)' }}>
-                    Kebutuhan & Rencana Pengembangan
+                    Pesan atau Pertanyaan
                   </label>
                   <textarea
                     name="pesan"
                     value={formData.pesan}
                     onChange={handleChange}
-                    placeholder="Ceritakan kebutuhan atau rencana pengembangan UPT Bahasa di institusi Anda."
+                    placeholder="Tuliskan pertanyaan atau kebutuhan spesifik Anda terkait Program MBI..."
                     rows={4}
-                    className={`${inputClass('pesan')} resize-none`}
+                    className="w-full px-4 py-3 rounded-xl text-sm border border-stone-200 bg-white focus:border-green-700 focus:ring-2 focus:ring-green-100 focus:ring-offset-0 outline-none transition-all duration-200 resize-none"
                     style={{ color: 'var(--ink)' }}
                   />
                 </div>
@@ -361,11 +367,11 @@ export default function ConsultationFormSection() {
                       name="consent"
                       checked={formData.consent}
                       onChange={handleChange}
-                      className="mt-0.5 flex-shrink-0 w-4 h-4 rounded accent-green-800"
+                      className="mt-0.5 w-4 h-4 rounded accent-green-800 flex-shrink-0"
                       aria-required="true"
                     />
                     <span className="text-xs leading-relaxed" style={{ color: 'var(--ink-soft)' }}>
-                      Saya menyetujui bahwa data yang saya berikan akan digunakan oleh Briton English Education untuk keperluan konsultasi dan komunikasi terkait program pengembangan UPT Pusat Bahasa PTKIN.
+                      Saya menyetujui bahwa data yang saya berikan akan digunakan oleh tim Program MBI untuk keperluan konsultasi dan tindak lanjut program.
                     </span>
                   </label>
                   {errors.consent && <p className="text-xs mt-1 text-red-500">{errors.consent}</p>}
@@ -376,14 +382,14 @@ export default function ConsultationFormSection() {
               <button
                 type="submit"
                 disabled={status === 'loading'}
-                className="btn-gold w-full py-4 rounded-xl text-sm font-bold uppercase tracking-wider disabled:opacity-60 disabled:cursor-not-allowed"
+                className="w-full btn-gold py-4 rounded-xl text-sm font-bold uppercase tracking-wider transition-all duration-200 disabled:opacity-60 disabled:cursor-not-allowed"
               >
                 {status === 'loading' ? 'Mengirim...' : 'Kirim Permintaan Konsultasi'}
               </button>
 
               {status === 'error' && (
-                <p className="text-xs text-center mt-4 text-red-500">
-                  Terjadi kesalahan. Silakan coba lagi atau hubungi kami langsung.
+                <p className="text-xs mt-3 text-center text-red-500">
+                  Terjadi kesalahan. Silakan coba lagi atau hubungi kami langsung melalui WhatsApp.
                 </p>
               )}
             </form>

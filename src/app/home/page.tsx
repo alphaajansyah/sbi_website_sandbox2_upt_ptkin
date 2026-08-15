@@ -6,17 +6,15 @@ import Footer from '@/components/Footer';
 const loadingFallback = () => <div className="py-16" />;
 
 const HeroSection = dynamic(() => import('./components/HeroSection'), { ssr: true, loading: loadingFallback });
-const InternationalPartnersSection = dynamic(() => import('./components/InternationalPartnersSection'), { loading: loadingFallback });
-const WhyUPTBahasaSection = dynamic(() => import('./components/WhyUPTBahasaSection'), { loading: loadingFallback });
-const DevelopmentModelSection = dynamic(() => import('./components/DevelopmentModelSection'), { loading: loadingFallback });
-const StudiKasusSection = dynamic(() => import('./components/StudiKasusSection'), { loading: loadingFallback });
-const InternationalProgrammesSection = dynamic(() => import('./components/InternationalProgrammesSection'), { loading: loadingFallback });
-const CEFRFrameworkSection = dynamic(() => import('./components/CEFRFrameworkSection'), { loading: loadingFallback });
-const ImplementationRoadmapSection = dynamic(() => import('./components/ImplementationRoadmapSection'), { loading: loadingFallback });
-const SimulasiProyeksiSection = dynamic(() => import('./components/SimulasiProyeksiSection'), { loading: loadingFallback });
-const PetaTargetSection = dynamic(() => import('./components/PetaTargetSection'), { loading: loadingFallback });
+const TantanganLatarBelakangSection = dynamic(() => import('./components/TantanganLatarBelakangSection'), { loading: loadingFallback });
+const AlurProgramSection = dynamic(() => import('./components/AlurProgramSection'), { loading: loadingFallback });
+const PipelinePengembanganGuruSection = dynamic(() => import('./components/PipelinePengembanganGuruSection'), { loading: loadingFallback });
+const CEfTSection = dynamic(() => import('./components/CEfTSection'), { loading: loadingFallback });
+const PBISection = dynamic(() => import('./components/PBISection'), { loading: loadingFallback });
+const InternationalToTSection = dynamic(() => import('./components/InternationalToTSection'), { loading: loadingFallback });
+const StandarCapaianSection = dynamic(() => import('./components/StandarCapaianSection'), { loading: loadingFallback });
 const DampakProgramSection = dynamic(() => import('./components/DampakProgramSection'), { loading: loadingFallback });
-const FinalCTASection = dynamic(() => import('./components/FinalCTASection'), { loading: loadingFallback });
+const MitraKredibilitasSection = dynamic(() => import('./components/MitraKredibilitasSection'), { loading: loadingFallback });
 const ConsultationFormSection = dynamic(() => import('./components/ConsultationFormSection'), { loading: loadingFallback });
 
 export default function HomePage() {
@@ -24,17 +22,15 @@ export default function HomePage() {
     <main className="min-h-screen" style={{ background: 'var(--fog)' }}>
       <Header />
       <HeroSection />
-      <InternationalPartnersSection />
-      <WhyUPTBahasaSection />
-      <DevelopmentModelSection />
-      <StudiKasusSection />
-      <InternationalProgrammesSection />
-      <CEFRFrameworkSection />
-      <ImplementationRoadmapSection />
-      <SimulasiProyeksiSection />
-      <PetaTargetSection />
+      <TantanganLatarBelakangSection />
+      <AlurProgramSection />
+      <PipelinePengembanganGuruSection />
+      <CEfTSection />
+      <PBISection />
+      <InternationalToTSection />
+      <StandarCapaianSection />
       <DampakProgramSection />
-      <FinalCTASection />
+      <MitraKredibilitasSection />
       <ConsultationFormSection />
       <Footer />
     </main>

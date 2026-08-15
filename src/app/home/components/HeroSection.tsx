@@ -33,7 +33,7 @@ export default function HeroSection() {
         <div className="absolute inset-0 ken-burns">
           <img
             src="/assets/images/kirsten-drew-xWdwXtgw-Pg-unsplash-1784053430910.jpg"
-            alt="Lingkungan akademik universitas Islam Indonesia — suasana kampus PTKIN yang profesional"
+            alt="Lingkungan akademik madrasah Indonesia — suasana pembelajaran Bahasa Inggris yang profesional"
             className="absolute inset-0 w-full h-full object-cover"
             style={{ objectPosition: 'center 35%' }}
           />
@@ -48,52 +48,68 @@ export default function HeroSection() {
         <div className="noise-overlay" />
       </div>
 
-      {/* Briton credential badge — desktop right side */}
+      {/* Briton credential card — desktop right side */}
       <div
         className="absolute z-10 hidden lg:flex items-center justify-center"
-        style={{ right: '5%', top: '50%', transform: 'translateY(-50%)' }}
+        style={{ right: '4%', top: '50%', transform: 'translateY(-50%)' }}
       >
         <div
-          className="flex flex-col items-center gap-4 px-8 py-8 rounded-2xl"
+          className="flex flex-col items-center gap-5 px-10 py-10 rounded-2xl"
           style={{
-            background: 'rgba(15,35,24,0.65)',
-            border: '1px solid rgba(184,150,60,0.3)',
-            backdropFilter: 'blur(12px)',
-            WebkitBackdropFilter: 'blur(12px)',
-            minWidth: '220px',
+            background: 'rgba(15,35,24,0.70)',
+            border: '1px solid rgba(184,150,60,0.35)',
+            backdropFilter: 'blur(16px)',
+            WebkitBackdropFilter: 'blur(16px)',
+            minWidth: '260px',
+            maxWidth: '300px',
           }}
         >
+          {/* MBI Logo — Primary identity */}
           <img
-            src="/assets/images/briton_and_cambridge_logo_white-1785419771590.png"
+            src="/assets/images/mbi_image_refined_via_chatgpt-1786649818622.png"
+            alt="MBI — Madrasah Berbahasa Inggris"
+            className="w-full h-auto object-contain"
+            style={{ maxHeight: '110px' }}
+          />
+          {/* Briton English Education Logo — Secondary identity */}
+          <img
+            src="/assets/images/Group-1076-1-1-1786685465389.png"
             alt="Briton English Education"
-            className="h-14 w-auto object-contain"
+            className="w-auto h-auto object-contain"
+            style={{ maxHeight: '52px', maxWidth: '180px' }}
           />
           <div className="w-full h-px" style={{ background: 'rgba(184,150,60,0.3)' }} />
-          <div className="text-center">
-            <p className="text-xs font-bold uppercase tracking-widest mb-1" style={{ color: 'var(--gold)' }}>
-              Mitra Pengembangan
-            </p>
-            <p className="text-xs text-white/70 leading-relaxed">
-              UPT Pusat Bahasa<br />PTKIN
-            </p>
-          </div>
+          {/* Cambridge credential */}
           <div className="text-center">
             <p className="text-xs font-semibold text-white/50 uppercase tracking-wider">Cambridge English</p>
             <p className="text-xs font-semibold text-white/50 uppercase tracking-wider">Authorised Centre</p>
-            <p className="text-sm font-serif mt-1" style={{ color: 'var(--gold)' }}>ID003</p>
+            <p className="text-sm font-serif mt-1.5" style={{ color: 'var(--gold)' }}>ID003</p>
+          </div>
+          <div className="w-full h-px" style={{ background: 'rgba(184,150,60,0.15)' }} />
+          {/* MBI Programme identity */}
+          <div className="text-center">
+            <p className="text-xs font-bold uppercase tracking-widest mb-1.5" style={{ color: 'var(--gold)' }}>
+              Mitra Implementasi
+            </p>
+            <p className="text-xs text-white/60 leading-relaxed">
+              Madrasah Berbahasa Inggris (MBI)
+            </p>
+            <p className="text-xs text-white/40 leading-relaxed mt-1">
+              Cambridge English for Kemenag
+            </p>
           </div>
         </div>
       </div>
 
       {/* Content */}
       <div className="relative z-10 flex flex-col flex-1 pt-28 pb-20 px-6">
-        <div className="max-w-5xl mx-auto w-full flex flex-col flex-1">
+        <div className="max-w-4xl mx-auto w-full flex flex-col flex-1 lg:mr-[340px]">
 
           {/* Eyebrow */}
           <div className="mb-4 flex items-center gap-3">
             <div className="rule-gold" />
             <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: 'var(--gold)' }}>
-              Program Penguatan Kelembagaan PTKIN
+              Program Nasional Kementerian Agama RI
             </span>
           </div>
 
@@ -106,7 +122,7 @@ export default function HeroSection() {
             />
           </div>
 
-          {/* Briton badge — mobile */}
+          {/* MBI badge — mobile */}
           <div className="lg:hidden mb-8 flex">
             <div
               className="flex items-center gap-3 px-5 py-3 rounded-xl"
@@ -116,27 +132,38 @@ export default function HeroSection() {
                 backdropFilter: 'blur(8px)',
               }}
             >
-              <img
-                src="/assets/images/briton_and_cambridge_logo_white-1785419771590.png"
-                alt="Briton English Education"
-                className="h-8 w-auto object-contain"
-              />
-              <div>
-                <p className="text-xs font-semibold text-white/80">Briton English Education</p>
-                <p className="text-xs" style={{ color: 'var(--gold)' }}>Mitra Pengembangan UPT Bahasa PTKIN</p>
+              <div className="flex flex-col items-center gap-2">
+                <img
+                  src="/assets/images/mbi_image_refined_via_chatgpt-1786649818622.png"
+                  alt="MBI — Madrasah Berbahasa Inggris"
+                  className="h-12 w-auto object-contain"
+                />
+                <img
+                  src="/assets/images/Group-1076-1-1-1786685465389.png"
+                  alt="Briton English Education"
+                  className="h-6 w-auto object-contain"
+                />
+              </div>
+              <div className="text-center">
+                <p className="text-xs font-semibold text-white/50 uppercase tracking-wider leading-relaxed">
+                  Cambridge English Authorised Centre
+                </p>
+                <p className="text-sm font-serif mt-1" style={{ color: 'var(--gold)' }}>
+                  ID003
+                </p>
               </div>
             </div>
           </div>
 
           {/* Headline */}
           <div className={`mb-6 ${titleRevealed ? 'reveal-active' : ''}`}>
-            <h1 className="font-serif text-white leading-none">
+            <h1 className="font-serif text-white" style={{ lineHeight: 1.1 }}>
               <span className="text-reveal-wrapper block">
                 <span
                   className="text-reveal-content text-4xl md:text-6xl lg:text-7xl"
                   style={{ transitionDelay: '0.1s' }}
                 >
-                  UPT Pusat Bahasa
+                  Cambridge English
                 </span>
               </span>
               <span className="text-reveal-wrapper block">
@@ -144,7 +171,7 @@ export default function HeroSection() {
                   className="text-reveal-content text-4xl md:text-6xl lg:text-7xl italic"
                   style={{ color: 'var(--gold)', transitionDelay: '0.25s' }}
                 >
-                  Bertaraf Internasional
+                  for Kemenag
                 </span>
               </span>
             </h1>
@@ -155,7 +182,7 @@ export default function HeroSection() {
             className="text-lg md:text-xl font-semibold leading-snug max-w-2xl mb-5"
             style={{ color: 'rgba(255,255,255,0.92)' }}
           >
-            Membangun Pusat Bahasa PTKIN yang Profesional, Mandiri, dan Berdaya Saing
+            Madrasah Berbahasa Inggris (MBI)
           </p>
 
           {/* Description */}
@@ -163,13 +190,13 @@ export default function HeroSection() {
             className="text-base md:text-lg leading-relaxed max-w-2xl mb-10"
             style={{ color: 'rgba(255,255,255,0.72)' }}
           >
-            Program pengembangan dan pendampingan UPT Pusat Bahasa untuk memperkuat layanan Bahasa Inggris, kompetensi SDM, sistem pengelolaan, serta akses terhadap standar dan kualifikasi internasional.
+            Program Nasional Peningkatan Kualifikasi dan Kompetensi Guru Bahasa Inggris Madrasah Berbasis Standar Cambridge untuk memperkuat kompetensi guru, implementasi pembelajaran Bahasa Inggris, serta peningkatan capaian peserta didik madrasah sesuai standar internasional.
           </p>
 
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-4 mb-12">
             <button
-              onClick={() => handleNavClick('#mengapa-upt-bahasa')}
+              onClick={() => handleNavClick('#latar-belakang')}
               className="btn-gold px-8 py-4 rounded-full text-sm font-bold uppercase tracking-wider"
             >
               Pelajari Program
@@ -188,11 +215,13 @@ export default function HeroSection() {
             <div className="w-px h-8" style={{ background: 'rgba(184,150,60,0.4)' }} />
             <div>
               <p className="text-xs font-medium" style={{ color: 'rgba(255,255,255,0.5)' }}>
-                Dikembangkan oleh{' '}
+                Dikembangkan bersama{' '}
+                <span style={{ color: 'var(--gold)' }}>Cambridge English</span>
+                {' '}dan{' '}
                 <span style={{ color: 'var(--gold)' }}>Briton English Education</span>
               </p>
               <p className="text-xs" style={{ color: 'rgba(255,255,255,0.4)' }}>
-                Penguatan Layanan Bahasa dan Daya Saing Perguruan Tinggi Keagamaan Islam Negeri
+                Program Nasional Peningkatan Kompetensi Guru Bahasa Inggris Madrasah — Kementerian Agama RI
               </p>
             </div>
           </div>

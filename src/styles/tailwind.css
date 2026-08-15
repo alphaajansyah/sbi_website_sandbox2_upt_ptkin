@@ -85,6 +85,8 @@ body {
   overflow: hidden;
   display: inline-block;
   vertical-align: bottom;
+  padding-bottom: 0.15em;
+  margin-bottom: -0.15em;
 }
 .text-reveal-content {
   display: block;
