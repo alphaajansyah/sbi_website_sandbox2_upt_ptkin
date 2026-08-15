@@ -65,7 +65,7 @@ const studentTargets = [
     abbr: 'MI',
     cefr: 'A1',
     cefrLabel: 'Beginner',
-    qualification: 'Cambridge English: Young Learners — Starters',
+    qualification: 'Cambridge English: Young Learners — Movers',
     skills: ['Memahami instruksi sederhana', 'Berkomunikasi dalam situasi sehari-hari', 'Membaca teks pendek', 'Menulis kalimat dasar'],
   },
   {
