@@ -230,18 +230,9 @@ export default function StandarCapaianSection() {
 
         {/* ── STAGE 1: STANDAR PEMBELAJARAN ── */}
         <div className={`mb-20 transition-all duration-1000 delay-200 ${revealed ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          {/* Stage label */}
+          {/* Section label */}
           <div className="flex items-center gap-4 mb-8">
-            <div
-              className="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold"
-              style={{ background: 'rgba(184,150,60,0.2)', color: 'var(--gold)', border: '1px solid rgba(184,150,60,0.4)' }}
-            >
-              01
-            </div>
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-widest" style={{ color: 'var(--gold)' }}>Tahap Pertama</p>
-              <h3 className="text-xl md:text-2xl font-serif font-bold text-white">Standar Pembelajaran</h3>
-            </div>
+            <h3 className="text-xl md:text-2xl font-serif font-bold text-white">Standar Pembelajaran</h3>
             <div className="flex-1 h-px ml-2" style={{ background: 'rgba(184,150,60,0.15)' }} />
           </div>
 
@@ -282,18 +273,9 @@ export default function StandarCapaianSection() {
 
         {/* ── STAGE 2: ASESMEN & CEFR — Cambridge Standards ── */}
         <div className={`mb-20 transition-all duration-1000 delay-300 ${revealed ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          {/* Stage label */}
+          {/* Section label */}
           <div className="flex items-center gap-4 mb-8">
-            <div
-              className="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold"
-              style={{ background: 'rgba(184,150,60,0.2)', color: 'var(--gold)', border: '1px solid rgba(184,150,60,0.4)' }}
-            >
-              02
-            </div>
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-widest" style={{ color: 'var(--gold)' }}>Tahap Kedua</p>
-              <h3 className="text-xl md:text-2xl font-serif font-bold text-white">Asesmen &amp; CEFR</h3>
-            </div>
+            <h3 className="text-xl md:text-2xl font-serif font-bold text-white">Asesmen &amp; CEFR</h3>
             <div className="flex-1 h-px ml-2" style={{ background: 'rgba(184,150,60,0.15)' }} />
           </div>
 
