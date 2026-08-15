@@ -124,7 +124,7 @@ export default function StandarCapaianSection() {
               Standar &amp; Capaian
             </span>
           </div>
-          <h2 className="question-serif text-3xl md:text-5xl lg:text-6xl mb-6 text-white leading-tight" style={{ maxWidth: '720px' }}>
+          <h2 className="question-serif text-3xl md:text-5xl lg:text-6xl mb-6 leading-tight" style={{ maxWidth: '720px', color: 'white' }}>
             MAPEL Cambridge English
           </h2>
           <p className="text-base md:text-lg leading-relaxed" style={{ color: 'rgba(255,255,255,0.7)', maxWidth: '680px' }}>
